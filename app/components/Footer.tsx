@@ -29,7 +29,6 @@ const Footer: React.FC = () => {
         </div>
         <div className={styles.footerColumn}>
           <h3 className={styles.footerColumnTitle}>Contact Us</h3>
-          <p className={styles.footerText}>4210 South Galapago Street, Englewood, CO 80110</p>
           <p className={styles.footerText}>
             Email: <a href="mailto:PTP5280@gmail.com" className={styles.footerLink}>PTP5280@gmail.com</a>
           </p>

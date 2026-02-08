@@ -4,6 +4,7 @@ import { supabase } from '../lib/supabase';
 import { notFound } from 'next/navigation';
 import Markdown from '../components/Markdown';
 import { Metadata } from 'next';
+import FAQ from '../components/FAQ';
 
 export const revalidate = 60;
 
@@ -186,32 +187,7 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
           {faqs && faqs.length > 0 && (
             <div className="mt-5">
               <h2 className="fw-bold mb-4 text-center">Frequently Asked Questions</h2>
-              <div className="accordion" id="faqAccordion">
-                {faqs.map((faq: FAQItem, index: number) => (
-                  <div className="accordion-item" key={index}>
-                    <h2 className="accordion-header" id={`faq-heading-${index}`}>
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target={`#faq-collapse-${index}`}
-                        aria-expanded="false"
-                        aria-controls={`faq-collapse-${index}`}
-                      >
-                        {faq.question}
-                      </button>
-                    </h2>
-                    <div
-                      id={`faq-collapse-${index}`}
-                      className="accordion-collapse collapse"
-                      aria-labelledby={`faq-heading-${index}`}
-                      data-bs-parent="#faqAccordion"
-                    >
-                      <div className="accordion-body">{faq.answer}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <FAQ faqs={faqs} />
             </div>
           )}
         </div>

@@ -8,7 +8,7 @@ interface Faq {
   answer: string;
 }
 
-const faqs: Faq[] = [
+const defaultFaqs: Faq[] = [
     {
         question: "What areas do you serve?",
         answer: "We serve the entire Denver metropolitan area, including Arvada, Aurora, Centennial, Englewood, Littleton, Thornton, Westminster and much more."
@@ -35,30 +35,12 @@ const faqs: Faq[] = [
     }
 ];
 
-const FAQ = () => {
+const FAQ = ({ faqs = defaultFaqs }: { faqs?: Faq[] }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [ref, isVisible] = useFadeIn();
 
   const toggleFAQ = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
-  };
-
-  const generateJsonLd = () => {
-    const schema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": faqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer
-        }
-      }))
-    };
-    return {
-      __html: JSON.stringify(schema)
-    };
   };
 
   return (
@@ -76,10 +58,6 @@ const FAQ = () => {
           )}
         </div>
       ))}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={generateJsonLd()}
-      />
     </div>
   );
 };
