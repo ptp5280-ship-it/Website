@@ -22,9 +22,14 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://peachtreeplumbing5280.com'),
   title: "Peach Tree Plumbing",
   description: "Your trusted local plumber in Denver, Colorado.",
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#ffffff',
   robots: {
     index: true,
     follow: true,
+  },
+  openGraph: {
+    images: '/PTP-LOGO.jpg',
   },
 };
 
@@ -67,12 +72,12 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet"
         />
-      </head>
-      <body className={`d-flex flex-column min-vh-100 ${lilitaOne.variable} ${lato.variable}`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+      </head>
+      <body className={`d-flex flex-column min-vh-100 ${lilitaOne.variable} ${lato.variable}`}>
         <NavigationBar />
         <main className="flex-shrink-0">{children}</main>
         <Footer />

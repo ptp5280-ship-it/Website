@@ -45,3 +45,18 @@
   font-size: 1.5rem;
   font-weight: bold;
 }
+
+.showMoreButton {
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.showMoreButton:hover {
+  background-color: #005bb5;
+}
