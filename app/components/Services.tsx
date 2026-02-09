@@ -2,7 +2,16 @@
 
 import React from 'react';
 import styles from './Services.module.css';
-import { FaTools, FaFaucet, FaWater, FaExclamationTriangle, FaToilet, FaHome, FaBuilding, FaFire } from 'react-icons/fa';
+import {
+  FaTools,
+  FaFaucet,
+  FaWater,
+  FaExclamationTriangle,
+  FaToilet,
+  FaHome,
+  FaBuilding,
+  FaFire,
+} from 'react-icons/fa';
 
 const services = [
   {
@@ -17,7 +26,8 @@ const services = [
   },
   {
     title: 'Leak Detection',
-    description: 'Advanced leak detection to protect your home from water damage.',
+    description:
+      'Advanced leak detection to protect your home from water damage.',
     icon: <FaFaucet />,
   },
   {
@@ -27,22 +37,26 @@ const services = [
   },
   {
     title: 'Toilet Repair',
-    description: 'Repair and installation of all types of toilets and fixtures.',
+    description:
+      'Repair and installation of all types of toilets and fixtures.',
     icon: <FaToilet />,
   },
   {
     title: 'Natural Gas Plumbing',
-    description: 'Safe and reliable installation and repair of natural gas lines for your water heater, stove, fireplace, and outdoor bbq.',
+    description:
+      'Safe and reliable installation and repair of natural gas lines for your water heater, stove, fireplace, and outdoor bbq.',
     icon: <FaFire />,
   },
   {
     title: 'Residential Plumbing',
-    description: 'From leaky faucets to full-scale renovations, we provide reliable and efficient plumbing solutions for your home.',
+    description:
+      'From leaky faucets to full-scale renovations, we provide reliable and efficient plumbing solutions for your home.',
     icon: <FaHome />,
   },
   {
     title: 'Commercial Plumbing',
-    description: 'Our team is equipped to handle the complex plumbing needs of your business, ensuring minimal disruption to your operations.',
+    description:
+      'Our team is equipped to handle the complex plumbing needs of your business, ensuring minimal disruption to your operations.',
     icon: <FaBuilding />,
   },
 ];
@@ -55,11 +69,11 @@ const Services = () => {
         <div className={styles['services-grid']}>
           {services.map((service, index) => (
             <div className={styles['service-card']} key={index}>
-              <div className={styles['service-icon']}>
-                {service.icon}
-              </div>
+              <div className={styles['service-icon']}>{service.icon}</div>
               <h3 className={styles['service-title']}>{service.title}</h3>
-              <p className={styles['service-description']}>{service.description}</p>
+              <p className={styles['service-description']}>
+                {service.description}
+              </p>
             </div>
           ))}
         </div>

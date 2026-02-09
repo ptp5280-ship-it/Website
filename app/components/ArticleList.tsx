@@ -21,9 +21,9 @@ export default function ArticleList({ articles }: ArticleListProps) {
       {articles.map((article) => (
         <div className="col-md-4" key={article.id}>
           <div className="card mb-4">
-            <Image 
-              src={article.image_url} 
-              alt={article.title} 
+            <Image
+              src={article.image_url}
+              alt={article.title}
               className="card-img-top"
               width={400}
               height={225}

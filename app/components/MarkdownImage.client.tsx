@@ -11,7 +11,13 @@ interface MarkdownImageProps {
   isPriority: boolean;
 }
 
-const MarkdownImage: React.FC<MarkdownImageProps> = ({ src, alt, width, height, isPriority }) => {
+const MarkdownImage: React.FC<MarkdownImageProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  isPriority,
+}) => {
   return (
     <Image
       src={src}

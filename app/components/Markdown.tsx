@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useCallback } from 'react';
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown, { Components } from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import MarkdownImage from './MarkdownImage.client';
@@ -14,12 +14,7 @@ const FirstImageContext = createContext<FirstImageContextType>([false, () => {}]
 
 // Define the props for the ImageRenderer component
 interface ImageRendererProps {
-  node?: {
-    properties?: {
-      width?: string | number;
-      height?: string | number;
-    };
-  };
+  node?: any; // Set to any to bypass the complex type checking for the node prop
   src?: string;
   alt?: string;
 }
@@ -50,6 +45,9 @@ const ImageRenderer: React.FC<ImageRendererProps> = ({ node, ...props }) => {
   );
 };
 
+const components: Components = {
+  img: ImageRenderer,
+};
 
 type MarkdownProps = {
   content: string;
@@ -69,9 +67,7 @@ const Markdown: React.FC<MarkdownProps> = ({ content }) => {
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw]}
-        components={{
-          img: ImageRenderer as any
-        }}
+        components={components}
       >
         {content}
       </ReactMarkdown>

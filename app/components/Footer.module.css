@@ -1,77 +1,77 @@
 .footer {
-    background-color: var(--brand-primary);
-    padding: 2rem 1rem;
-    border-top: 1px solid var(--brand-secondary);
-    color: var(--brand-neutral-light);
+  background-color: var(--brand-primary);
+  padding: 2rem 1rem;
+  border-top: 1px solid var(--brand-secondary);
+  color: var(--brand-neutral-light);
 }
 
 .footer h3 {
-    color: var(--brand-secondary);
+  color: var(--brand-secondary);
 }
 
 .footerContent {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .footerColumn {
-    flex: 1;
-    margin: 1rem;
-    min-width: 250px;
+  flex: 1;
+  margin: 1rem;
+  min-width: 250px;
 }
 
 .footerColumnTitle {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .footerText {
-    color: var(--brand-neutral-light);
+  color: var(--brand-neutral-light);
 }
 
 .footerLinks {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 2rem 0;
-    padding: 1rem 0;
-    border-top: 1px solid var(--brand-neutral-dark);
-    border-bottom: 1px solid var(--brand-neutral-dark);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--brand-neutral-dark);
+  border-bottom: 1px solid var(--brand-neutral-dark);
 }
 
 .footerLink {
-    color: var(--brand-neutral-light);
-    text-decoration: none;
-    margin: 0.5rem 1rem;
-    font-size: 0.9rem;
+  color: var(--brand-neutral-light);
+  text-decoration: none;
+  margin: 0.5rem 1rem;
+  font-size: 0.9rem;
 }
 
 .footerLink:hover {
-    text-decoration: underline;
-    color: var(--brand-secondary);
+  text-decoration: underline;
+  color: var(--brand-secondary);
 }
 
 .footerBottom {
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: var(--brand-neutral-light);
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--brand-neutral-light);
 }
 
 .socialIcons {
-    display: flex;
+  display: flex;
 }
 
 .socialIcon {
-    margin-right: 1rem;
-    color: var(--brand-neutral-light);
-    font-size: 1.5rem;
+  margin-right: 1rem;
+  color: var(--brand-neutral-light);
+  font-size: 1.5rem;
 }
 
 .socialIcon:hover {
-    color: var(--brand-accent);
+  color: var(--brand-accent);
 }

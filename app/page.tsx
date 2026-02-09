@@ -10,22 +10,21 @@ import { defaultFaqs } from '@/app/lib/faqData';
 export const revalidate = 60;
 
 export default function Home() {
-
   const generateJsonLd = () => {
     const schema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": defaultFaqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer
-        }
-      }))
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: defaultFaqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
     };
     return {
-      __html: JSON.stringify(schema)
+      __html: JSON.stringify(schema),
     };
   };
 

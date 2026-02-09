@@ -17,23 +17,32 @@ const FAQ = ({ faqs = defaultFaqs }: { faqs?: Faq[] }) => {
   const displayedFaqs = showAll ? faqs : faqs.slice(0, 5);
 
   return (
-    <div ref={ref} className={`${styles.faqContainer} ${isVisible ? styles.visible : ''}`}>
+    <div
+      ref={ref}
+      className={`${styles.faqContainer} ${isVisible ? styles.visible : ''}`}
+    >
       {displayedFaqs.map((faq, index) => (
-        <div key={index} className={`${styles.faqItem} ${activeIndex === index ? styles.active : ''}`}>
+        <div
+          key={index}
+          className={`${styles.faqItem} ${activeIndex === index ? styles.active : ''}`}
+        >
           <div className={styles.faqQuestion} onClick={() => toggleFAQ(index)}>
             {faq.question}
-            <span className={styles.icon}>{activeIndex === index ? '−' : '+'}</span>
+            <span className={styles.icon}>
+              {activeIndex === index ? '−' : '+'}
+            </span>
           </div>
           {activeIndex === index && (
-            <div className={styles.faqAnswer}>
-              {faq.answer}
-            </div>
+            <div className={styles.faqAnswer}>{faq.answer}</div>
           )}
         </div>
       ))}
       {faqs.length > 5 && (
         <div className={styles.buttonContainer}>
-          <button onClick={() => setShowAll(!showAll)} className={styles.showMoreButton}>
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className={styles.showMoreButton}
+          >
             {showAll ? 'Show Less Questions' : 'Show More Questions'}
           </button>
         </div>
