@@ -6,10 +6,12 @@ const HeroBanner = () => {
     <div className="hero-banner">
       <Image
         src="/PTP-LOGO.jpg"
-        alt="PTP anner"
-        layout="responsive"
+        alt="Peachtree Plumbing Logo Banner"
         width={720}
         height={405}
+        sizes="100vw"
+        priority
+        style={{ maxWidth: '100%', height: 'auto' }}
       />
     </div>
   );

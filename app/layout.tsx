@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Lilita_One, Lato } from 'next/font/google';
 import './globals.css';
 import './styles/markdown.css';
@@ -22,8 +22,6 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://peachtreeplumbing5280.com'),
   title: 'Peach Tree Plumbing',
   description: 'Your trusted local plumber in Denver, Colorado.',
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#ffffff',
   robots: {
     index: true,
     follow: true,
@@ -31,6 +29,12 @@ export const metadata: Metadata = {
   openGraph: {
     images: '/PTP-LOGO.jpg',
   },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#ffffff',
 };
 
 export default function RootLayout({
