@@ -22,6 +22,21 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'peachtreeplumbing5280.com',
+          },
+        ],
+        destination: 'https://www.peachtreeplumbing5280.com/:path*',
+        permanent: true,
+      },
+    ]
+  },
 };
 
 export default nextConfig;

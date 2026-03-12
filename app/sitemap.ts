@@ -3,7 +3,7 @@ import { supabase } from './lib/supabase';
 
 export const revalidate = 60;
 
-const BASE_URL = 'https://peachtreeplumbing5280.com';
+const BASE_URL = 'https://www.peachtreeplumbing5280.com';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let postEntries: MetadataRoute.Sitemap = [];
@@ -36,20 +36,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       categoryEntries = categories.map(({ slug, updated_at }) => ({
         url: `${BASE_URL}/category/${slug}`,
         lastModified: updated_at,
-        changeFrequency: 'monthly',
-        priority: 0.7,
+        changeFrequency: 'weekly',
+        priority: 0.6,
       }));
     }
   } catch (error) {
-    console.error('Error fetching blog categories for sitemap:', error);
+    console.error('Error fetching categories for sitemap:', error);
   }
 
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
       lastModified: new Date(),
-      changeFrequency: 'yearly',
+      changeFrequency: 'monthly',
       priority: 1,
+    },
+     {
+      url: `${BASE_URL}/category`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
     },
   ];
 

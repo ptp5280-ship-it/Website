@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
     'https://www.google.com/maps/place/Peach+Tree+Plumbing+LLC/@39.642466,-104.991296,15z/data=!4m2!3m1!1s0x0:0x5d4b3917d43291c9?sa=X&ved=2ahUKEwi52qTMwfqAAxU9go4IHRk2B2EQ_BJ6BAg_EAA&ved=2ahUKEwi52qTMwfqAAxU9go4IHRk2B2EQ_BJ6BAhDEAg';
   const instagramURL = 'https://www.instagram.com/peachtreeplumbing';
   const yelpURL =
-    'https://www.yelp.com/biz/peach-tree-plumbing-englewood-2?osq=denver+plumbing+team';
+    'https://www.yelp.com/biz/peach-tree-plumbing-englewood-2?start=20';
 
   return (
     <footer className={styles.footer}>

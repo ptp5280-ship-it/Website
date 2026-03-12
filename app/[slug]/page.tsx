@@ -27,10 +27,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: post.meta_title,
       description: post.meta_description,
-      url: `https://peachtreeplumbing5280.com/${post.slug}`,
+      url: `https://www.peachtreeplumbing5280.com/${post.slug}`,
       images: [
         {
-          url: post.image || 'https://peachtreeplumbing5280.com/PTP-LOGO.jpg',
+          url: post.image || 'https://www.peachtreeplumbing5280.com/PTP-LOGO.jpg',
           width: 800,
           height: 600,
           alt: post.alt_text || post.focus_keyword,
@@ -41,11 +41,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title: post.meta_title,
       description: post.meta_description,
-      images: [post.image || 'https://peachtreeplumbing5280.com/PTP-LOGO.jpg'],
+      images: [post.image || 'https://www.peachtreeplumbing5280.com/PTP-LOGO.jpg'],
     },
     alternates: {
       canonical:
-        post.canonical_url || `https://peachtreeplumbing5280.com/${post.slug}`,
+        post.canonical_url || `https://www.peachtreeplumbing5280.com/${post.slug}`,
     },
   };
 }
@@ -110,7 +110,7 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
     '@type': post.schema_type || 'Article', // Use dynamic schema type
     headline: post.title,
     description: post.excerpt, // Use excerpt for description
-    image: post.image || 'https://peachtreeplumbing5280.com/PTP-LOGO.jpg',
+    image: post.image || 'https://www.peachtreeplumbing5280.com/PTP-LOGO.jpg',
     datePublished: new Date(post.created_at).toISOString(),
     dateModified: new Date(post.updated_at).toISOString(), // Use updated_at
     author: {
@@ -122,13 +122,13 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
       name: 'Peach Tree Plumbing',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://peachtreeplumbing5280.com/PTP-LOGO.jpg',
+        url: 'https://www.peachtreeplumbing5280.com/PTP-LOGO.jpg',
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id':
-        post.canonical_url || `https://peachtreeplumbing5280.com/${post.slug}`,
+        post.canonical_url || `https://www.peachtreeplumbing5280.com/${post.slug}`,
     },
   };
 
