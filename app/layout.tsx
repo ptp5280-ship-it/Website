@@ -5,6 +5,12 @@ import './styles/markdown.css';
 import NavigationBar from '@/app/components/NavigationBar';
 import Footer from '@/app/components/Footer';
 import Script from 'next/script';
+import { peachTreePlumbingSchema } from '@/app/lib/schema'; // Import the new schema
+import {
+  SITE_URL,
+  SITE_NAME,
+  SITE_DESCRIPTION,
+} from '@/app/lib/config';
 
 const lilitaOne = Lilita_One({
   subsets: ['latin'],
@@ -19,9 +25,9 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://peachtreeplumbing5280.com'),
-  title: 'Peach Tree Plumbing',
-  description: 'Your trusted local plumber in Denver, Colorado.',
+  metadataBase: new URL(SITE_URL),
+  title: SITE_NAME,
+  description: SITE_DESCRIPTION,
   robots: {
     index: true,
     follow: true,
@@ -42,30 +48,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'Peach Tree Plumbing',
-    image: 'https://peachtreeplumbing5280.com/PTP-LOGO.jpg',
-    '@id': 'https://peachtreeplumbing5280.com',
-    url: 'https://peachtreeplumbing5280.com',
-    telephone: '(720) 298-1900',
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: [
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday',
-        'Sunday',
-      ],
-      opens: '00:00',
-      closes: '23:59',
-    },
-    sameAs: ['https://www.instagram.com/peachtreeplumbing/'],
-  };
 
   return (
     <html lang="en">
@@ -76,7 +58,7 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(peachTreePlumbingSchema) }} // Use the new schema
         />
       </head>
       <body

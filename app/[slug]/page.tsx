@@ -5,10 +5,10 @@ import { notFound } from 'next/navigation';
 import Markdown from '../components/Markdown';
 import { Metadata } from 'next';
 import FAQ from '../components/FAQ';
+import '../styles/markdown.css'; // <--- CORRECTIVE ACTION
 
 export const revalidate = 60;
 
-// generateMetadata function
 type Props = {
   params: { slug: string };
 };
@@ -50,13 +50,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// This interface matches the component's expectation
 interface FAQItem {
   question: string;
   answer: string;
 }
 
-// This interface matches the structure of the data coming from Supabase
 interface SupabaseFaqItem {
   name: string;
   acceptedAnswer: {
@@ -69,15 +67,12 @@ async function getBlogPost(slug: string) {
     .from('blog_posts')
     .select('*')
     .eq('slug', slug)
-    .eq('is_published', true) // Only fetch published posts
+    .eq('is_published', true)
     .single();
 
-  if (!data) {
-    notFound();
-  }
-
-  if (error && error.code !== 'PGRST116') {
+  if (error || !data) {
     console.error('Error fetching blog post:', error);
+    notFound();
   }
 
   return data;
@@ -86,36 +81,31 @@ async function getBlogPost(slug: string) {
 const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
   const post = await getBlogPost(params.slug);
 
-  if (!post) {
-    // The getBlogPost function already calls notFound(), but it's good practice
-    // to have this check in the component as well.
-    notFound();
-  }
+  const faqItems: FAQItem[] =
+    post.faq_json && Array.isArray(post.faq_json.mainEntity)
+      ? post.faq_json.mainEntity.map((item: SupabaseFaqItem) => ({
+          question: item.name,
+          answer: item.acceptedAnswer.text,
+        }))
+      : [];
 
-  let faqs: FAQItem[] = [];
-  // Check if the structured data and the mainEntity array exist
-  if (
-    post.faq_json &&
-    post.faq_json.mainEntity &&
-    Array.isArray(post.faq_json.mainEntity)
-  ) {
-    // Map the incoming data structure to the one the component expects
-    faqs = post.faq_json.mainEntity.map((item: SupabaseFaqItem) => ({
-      question: item.name,
-      answer: item.acceptedAnswer.text,
-    }));
-  }
+  // --- Start of Centralized JSON-LD Schema ---
+  const schemaGraph: Record<string, unknown>[] = [];
 
-  const articleJsonLd = {
-    '@type': post.schema_type || 'Article', // Use dynamic schema type
+  schemaGraph.push({
+    '@type': 'BlogPosting',
+    '@id': `https://www.peachtreeplumbing5280.com/${post.slug}`,
+    mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': `https://www.peachtreeplumbing5280.com/${post.slug}`
+    },
     headline: post.title,
-    description: post.excerpt, // Use excerpt for description
+    description: post.excerpt,
     image: post.image || 'https://www.peachtreeplumbing5280.com/PTP-LOGO.jpg',
-    datePublished: new Date(post.created_at).toISOString(),
-    dateModified: new Date(post.updated_at).toISOString(), // Use updated_at
     author: {
-      '@type': 'Organization', // Using Organization as author for now
+      '@type': 'Organization',
       name: 'Peach Tree Plumbing',
+      url: 'https://www.peachtreeplumbing5280.com'
     },
     publisher: {
       '@type': 'Organization',
@@ -125,19 +115,14 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
         url: 'https://www.peachtreeplumbing5280.com/PTP-LOGO.jpg',
       },
     },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id':
-        post.canonical_url || `https://www.peachtreeplumbing5280.com/${post.slug}`,
-    },
-  };
+    datePublished: new Date(post.created_at).toISOString(),
+    dateModified: new Date(post.updated_at).toISOString(),
+  });
 
-  let jsonLd;
-
-  if (faqs && faqs.length > 0) {
-    const faqJsonLd = {
+  if (faqItems.length > 0) {
+    schemaGraph.push({
       '@type': 'FAQPage',
-      mainEntity: faqs.map((faq) => ({
+      mainEntity: faqItems.map((faq) => ({
         '@type': 'Question',
         name: faq.question,
         acceptedAnswer: {
@@ -145,17 +130,29 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
           text: faq.answer,
         },
       })),
-    };
-    jsonLd = {
-      '@context': 'https://schema.org',
-      '@graph': [articleJsonLd, faqJsonLd],
-    };
-  } else {
-    jsonLd = {
-      '@context': 'https://schema.org',
-      ...articleJsonLd,
-    };
+    });
   }
+
+  schemaGraph.push({
+    '@type': 'Plumber',
+    '@id': 'https://www.peachtreeplumbing5280.com/#plumber',
+    name: 'Peach Tree Plumbing',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '4210 S Galapago St',
+      addressLocality: 'Englewood',
+      addressRegion: 'CO',
+      postalCode: '80110',
+      addressCountry: 'US',
+    },
+    telephone: '+1-720-298-1900',
+    url: 'https://www.peachtreeplumbing5280.com',
+  });
+  
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': schemaGraph,
+  };
 
   return (
     <div className="container my-5 blog-post-container">
@@ -180,19 +177,19 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
             alt={post.title}
             width={800}
             height={400}
-            priority={true} // Add priority for LCP image
+            priority={true}
             className="img-fluid rounded mb-5 shadow"
           />
           <div className="markdown-content">
             <Markdown content={post.content} />
           </div>
 
-          {faqs && faqs.length > 0 && (
+          {faqItems.length > 0 && (
             <div className="mt-5">
               <h2 className="fw-bold mb-4 text-center">
                 Frequently Asked Questions
               </h2>
-              <FAQ faqs={faqs} />
+              <FAQ faqs={faqItems} />
             </div>
           )}
         </div>

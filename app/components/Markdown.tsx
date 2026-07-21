@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { createContext, useContext, useState, useCallback } from 'react';
@@ -5,6 +6,7 @@ import ReactMarkdown, { Components } from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import MarkdownImage from './MarkdownImage.client';
+import { Element } from 'hast'; // Import the Element type
 
 // Define the type for the context value
 type FirstImageContextType = [boolean, () => void];
@@ -14,7 +16,7 @@ const FirstImageContext = createContext<FirstImageContextType>([false, () => {}]
 
 // Define the props for the ImageRenderer component
 interface ImageRendererProps {
-  node?: any; // Set to any to bypass the complex type checking for the node prop
+  node?: Element; // Use the Element type for better type safety
   src?: string;
   alt?: string;
 }

@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from './NavigationBar.module.css';
+import { SITE_NAME, CONTACT_PHONE, CONTACT_PHONE_HREF } from '@/app/lib/config';
 
 const NavigationBar = () => {
   return (
@@ -10,10 +11,10 @@ const NavigationBar = () => {
       <div className="container">
         <div className={styles.navContainer}>
           <Link href="/" className={styles.brand}>
-            Peach Tree Plumbing
+            {SITE_NAME}
           </Link>
-          <a href="tel:720-298-1900" className={styles.phoneLink}>
-            TEXT & CALL (720)298-1900
+          <a href={CONTACT_PHONE_HREF} className={styles.phoneLink}>
+            TEXT & CALL {CONTACT_PHONE}
           </a>
         </div>
       </div>

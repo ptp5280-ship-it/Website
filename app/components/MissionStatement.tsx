@@ -2,12 +2,12 @@ import React from 'react';
 
 const MissionStatement = () => {
   return (
-    <section id="mission" className="py-5">
+    <section id="mission" className="py-5 bg-light">
       <div className="container text-center">
-        <h2 className="mb-5">A Message from Our Owner</h2>
+        <h2 className="mb-5 fw-bold text-primary">A Message from Our Owner</h2>
         <div className="row">
           <div className="col-lg-10 mx-auto">
-            <blockquote className="blockquote">
+            <blockquote className="blockquote bg-white p-5 rounded shadow-sm">
               <p className="lead mb-0">
                 &quot;When you support small local business you&apos;re not
                 helping a CEO buy a third vacation home or another new car,

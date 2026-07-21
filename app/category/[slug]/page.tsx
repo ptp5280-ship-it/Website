@@ -8,7 +8,6 @@ type Props = {
   params: { slug: string };
 };
 
-// Generate metadata for the category page
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { data: category } = await supabase
     .from('blog_categories')
@@ -17,10 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .single();
 
   if (!category) {
-    return {
-      title: 'Category Not Found',
-      description: 'This category does not exist.',
-    };
+    notFound();
   }
 
   return {
@@ -56,10 +52,10 @@ async function getPostsForCategory(categoryId: string) {
 
   if (error) {
     console.error('Error fetching posts for category:', error);
-    return [];
+    return []; // Return empty array on error
   }
 
-  return data;
+  return data || []; // Ensure an array is always returned
 }
 
 export default async function CategoryPage({
@@ -70,8 +66,27 @@ export default async function CategoryPage({
   const category = await getCategoryData(params.slug);
   const posts = await getPostsForCategory(category.id);
 
+  // --- Start of ItemList JSON-LD Schema ---
+  const itemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: category.name,
+    description: category.intro,
+    itemListElement: posts.map((post, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: `https://www.peachtreeplumbing5280.com/${post.slug}`,
+      name: post.title
+    })),
+  };
+  // --- End of ItemList JSON-LD Schema ---
+
   return (
     <main className="container my-5 bg-light p-5">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+      />
       <div className="row">
         <div className="col-lg-10 offset-lg-1">
           <div className="text-center mb-5">

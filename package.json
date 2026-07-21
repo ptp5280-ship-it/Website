@@ -30,6 +30,7 @@
     "@typescript-eslint/eslint-plugin": "^7.13.0",
     "eslint": "^8.57.0",
     "prettier": "^3.8.1",
+    "schema-dts": "^2.0.0",
     "typescript": "^5.9.3"
   }
 }

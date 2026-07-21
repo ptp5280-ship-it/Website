@@ -3,6 +3,13 @@ import React from 'react';
 import Link from 'next/link';
 import styles from './Footer.module.css';
 import { FaInstagram, FaYelp } from 'react-icons/fa';
+import {
+  CONTACT_EMAIL,
+  CONTACT_PHONE_HREF,
+  GOOGLE_BUSINESS_PROFILE_URL,
+  INSTAGRAM_URL,
+  YELP_URL,
+} from '@/app/lib/config';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -18,12 +25,6 @@ const Footer: React.FC = () => {
     );
     setIsMobile(mobile);
   }, []);
-
-  const googleBusinessProfileURL =
-    'https://www.google.com/maps/place/Peach+Tree+Plumbing+LLC/@39.642466,-104.991296,15z/data=!4m2!3m1!1s0x0:0x5d4b3917d43291c9?sa=X&ved=2ahUKEwi52qTMwfqAAxU9go4IHRk2B2EQ_BJ6BAg_EAA&ved=2ahUKEwi52qTMwfqAAxU9go4IHRk2B2EQ_BJ6BAhDEAg';
-  const instagramURL = 'https://www.instagram.com/peachtreeplumbing';
-  const yelpURL =
-    'https://www.yelp.com/biz/peach-tree-plumbing-englewood-2?start=20';
 
   return (
     <footer className={styles.footer}>
@@ -43,14 +44,14 @@ const Footer: React.FC = () => {
           <h3 className={styles.footerColumnTitle}>Contact Us</h3>
           <p className={styles.footerText}>
             Email:{' '}
-            <a href="mailto:PTP5280@gmail.com" className={styles.footerLink}>
-              PTP5280@gmail.com
+            <a href={`mailto:${CONTACT_EMAIL}`} className={styles.footerLink}>
+              {CONTACT_EMAIL}
             </a>
           </p>
           <p className={styles.footerText}>
             Phone:{' '}
             <a
-              href={isMobile ? 'tel:720-298-1900' : googleBusinessProfileURL}
+              href={isMobile ? CONTACT_PHONE_HREF : GOOGLE_BUSINESS_PROFILE_URL}
               className={styles.footerLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -63,7 +64,7 @@ const Footer: React.FC = () => {
           <h3 className={styles.footerColumnTitle}>Follow Us</h3>
           <div className={styles.socialIcons}>
             <a
-              href={instagramURL}
+              href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialIcon}
@@ -71,7 +72,7 @@ const Footer: React.FC = () => {
               <FaInstagram />
             </a>
             <a
-              href={yelpURL}
+              href={YELP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialIcon}

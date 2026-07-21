@@ -12,6 +12,19 @@ import {
   FaBuilding,
   FaFire,
 } from 'react-icons/fa';
+import Link from 'next/link'; // Import Link from Next.js
+
+// Helper function to create SEO-friendly slugs
+const slugify = (text: string) => {
+  return text
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/--+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '');
+};
 
 const services = [
   {
@@ -56,7 +69,7 @@ const services = [
   {
     title: 'Commercial Plumbing',
     description:
-      'Our team is equipped to handle the complex plumbing needs of your business, ensuring minimal disruption to your operations.',
+      'Our team is equipped to handle the complex plumbing needs of your business, ensuring minimal disruption to a an-import.',
     icon: <FaBuilding />,
   },
 ];
@@ -65,17 +78,26 @@ const Services = () => {
   return (
     <section id="services" className={styles['services-section']}>
       <div className={styles['services-container']}>
-        <h2 className={styles['services-title']}>Our Services</h2>
+        <div className={styles['title-container']}>
+          <Link href="/services">
+            <h2 className={styles['services-title']}>Our Services</h2>
+          </Link>
+        </div>
         <div className={styles['services-grid']}>
-          {services.map((service, index) => (
-            <div className={styles['service-card']} key={index}>
-              <div className={styles['service-icon']}>{service.icon}</div>
-              <h3 className={styles['service-title']}>{service.title}</h3>
-              <p className={styles['service-description']}>
-                {service.description}
-              </p>
-            </div>
-          ))}
+          {services.map((service, index) => {
+            const slug = slugify(service.title);
+            return (
+              <Link href={`/services/${slug}`} key={index} className={styles['service-card-link']}>
+                <div className={styles['service-card']}>
+                  <div className={styles['service-icon']}>{service.icon}</div>
+                  <h3 className={styles['service-title']}>{service.title}</h3>
+                  <p className={styles['service-description']}>
+                    {service.description}
+                  </p>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,27 +1,27 @@
 /** @type {import('next').NextConfig} */
+import { SITE_URL } from './app/lib/config.js';
+
 const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'placehold.co',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
         hostname: 'wkqcizcnptbebswqlkfk.supabase.co',
         port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'via.placeholder.com',
-        port: '',
-        pathname: '/**',
+        pathname: '/storage/v1/object/sign/plumber/**',
       },
     ],
   },
+  // Rewrites configuration
+  async rewrites() {
+    return [
+      {
+        source: '/sitemap.xml',
+        destination: '/api/sitemap',
+      },
+    ];
+  },
+  // Redirects configuration
   async redirects() {
     return [
       {
@@ -32,11 +32,16 @@ const nextConfig = {
             value: 'peachtreeplumbing5280.com',
           },
         ],
-        destination: 'https://www.peachtreeplumbing5280.com/:path*',
+        destination: `${SITE_URL}/:path*`,
         permanent: true,
       },
-    ]
+    ];
   },
+  // Other Next.js configurations can be added here
+  // For example, if you need to configure images, you can add:
+  // images: {
+  //   domains: ['example.com'],
+  // },
 };
 
 export default nextConfig;

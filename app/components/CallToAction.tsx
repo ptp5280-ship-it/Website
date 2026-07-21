@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { CONTACT_PHONE, CONTACT_PHONE_HREF } from '@/app/lib/config';
 
 const CallToAction: React.FC = () => {
   return (
@@ -20,8 +21,8 @@ const CallToAction: React.FC = () => {
 
         {/* Mobile Button */}
         <div className="d-block d-md-none">
-          <a href="tel:720-298-1900" className={`btn btn-primary btn-lg w-100`}>
-            Call Now: 720-298-1900
+          <a href={CONTACT_PHONE_HREF} className={`btn btn-primary btn-lg w-100`}>
+            Call Now: {CONTACT_PHONE}
           </a>
         </div>
       </div>
