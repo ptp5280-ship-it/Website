@@ -1,0 +1,60 @@
+.hero {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  background-color: #007bff;
+  width: 100%;
+  max-width: 1140px;
+}
+
+.heroImageMobile {
+  display: none;
+}
+
+.heroContent {
+  text-align: left;
+}
+
+.heroContent h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.heroContent p {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.heroImageDesktop {
+  display: block;
+}
+
+.imgFluid {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+    flex-direction: column;
+  }
+
+  .heroImageMobile {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  .heroContent {
+    text-align: center;
+  }
+
+  .heroImageDesktop {
+    display: none;
+  }
+}

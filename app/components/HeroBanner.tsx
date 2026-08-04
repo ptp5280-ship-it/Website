@@ -1,23 +1,23 @@
 import Image from 'next/image';
-import '../styles/HeroBanner.css';
+import styles from './HeroBanner.module.css';
 
 const HeroBanner = () => {
   return (
-    <div className="hero-section">
-      <div className="hero-container">
-        <div className="hero-content">
-          <h1 className="hero-title">Your Trusted Denver Plumber</h1>
-          <p className="hero-subtitle">
+    <div className={styles.heroSection}>
+      <div className={styles.heroContainer}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>Your Trusted Denver Plumber</h1>
+          <p className={styles.heroSubtitle}>
             Over 15 years of experience, offering transparent pricing on all plumbing services. Call for a free estimate!
           </p>
         </div>
-        <div className="hero-image-wrapper">
+        <div className={styles.heroImageWrapper}>
           <Image
             src="/PTP-LOGO.jpg"
             alt="Peachtree Plumbing van"
             width={720}
             height={405}
-            className="hero-image"
+            className={styles.heroImage}
             priority
           />
         </div>

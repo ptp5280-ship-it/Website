@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import styles from './Testimonials.module.css';
 
 const testimonials = [
   {
@@ -22,16 +23,16 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-5">
-      <h2 className="text-center mb-5">What Our Customers Are Saying</h2>
-      <div className="row">
+    <section className={styles.testimonialsSection}>
+      <h2 className={`${styles.textCenter} ${styles.marginBottom5}`}>What Our Customers Are Saying</h2>
+      <div className={styles.row}>
         {testimonials.map((testimonial, index) => (
-          <div className="col-md-4 mb-4" key={index}>
-            <div className="card h-100">
-              <div className="card-body">
-                <blockquote className="blockquote mb-0">
+          <div className={`${styles.col} ${styles.colMd4} ${styles.marginBottom4}`} key={index}>
+            <div className={`${styles.card} ${styles.h100}`}>
+              <div className={styles.cardBody}>
+                <blockquote className={`${styles.blockquote} ${styles.marginBottom0}`}>
                   <p>&quot;{testimonial.quote}&quot;</p>
-                  <footer className="blockquote-footer">
+                  <footer className={styles.blockquoteFooter}>
                     {testimonial.name}
                   </footer>
                 </blockquote>

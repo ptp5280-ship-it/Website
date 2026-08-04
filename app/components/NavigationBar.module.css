@@ -1,7 +1,14 @@
-.navbar {
+.fixedNavbar {
   background-color: var(--brand-primary);
   font-family: var(--font-lilita-one), sans-serif;
   padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  display: flex;
+  justify-content: center;
 }
 
 .navContainer {
@@ -9,6 +16,32 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 576px) {
+  .navContainer {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navContainer {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navContainer {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navContainer {
+    max-width: 1140px;
+  }
 }
 
 .brand {

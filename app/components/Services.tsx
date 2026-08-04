@@ -76,22 +76,22 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className={styles['services-section']}>
-      <div className={styles['services-container']}>
-        <div className={styles['title-container']}>
+    <section id="services" className={styles.servicesSection}>
+      <div className={styles.servicesContainer}>
+        <div className={styles.titleContainer}>
           <Link href="/services">
-            <h2 className={styles['services-title']}>Our Services</h2>
+            <h2 className={styles.servicesTitle}>Our Services</h2>
           </Link>
         </div>
-        <div className={styles['services-grid']}>
+        <div className={styles.servicesGrid}>
           {services.map((service, index) => {
             const slug = slugify(service.title);
             return (
-              <Link href={`/services/${slug}`} key={index} className={styles['service-card-link']}>
-                <div className={styles['service-card']}>
-                  <div className={styles['service-icon']}>{service.icon}</div>
-                  <h3 className={styles['service-title']}>{service.title}</h3>
-                  <p className={styles['service-description']}>
+              <Link href={`/services/${slug}`} key={index} className={styles.serviceCardLink}>
+                <div className={styles.serviceCard}>
+                  <div className={styles.serviceIcon}>{service.icon}</div>
+                  <h3 className={styles.serviceTitle}>{service.title}</h3>
+                  <p className={styles.serviceDescription}>
                     {service.description}
                   </p>
                 </div>

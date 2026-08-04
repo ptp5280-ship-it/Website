@@ -1,14 +1,15 @@
 import React from 'react';
+import styles from './MissionStatement.module.css';
 
 const MissionStatement = () => {
   return (
-    <section id="mission" className="py-5 bg-light">
-      <div className="container text-center">
-        <h2 className="mb-5 fw-bold text-primary">A Message from Our Owner</h2>
-        <div className="row">
-          <div className="col-lg-10 mx-auto">
-            <blockquote className="blockquote bg-white p-5 rounded shadow-sm">
-              <p className="lead mb-0">
+    <section id="mission" className={`${styles.missionSection} ${styles.py5} ${styles.bgLight}`}>
+      <div className={`${styles.container} ${styles.textCenter}`}>
+        <h2 className={`${styles.marginBottom5} ${styles.fwBold} ${styles.textPrimary}`}>A Message from Our Owner</h2>
+        <div className={styles.row}>
+          <div className={`${styles.colLg10} ${styles.mxAuto}`}>
+            <blockquote className={`${styles.blockquote} ${styles.bgWhite} ${styles.p5} ${styles.rounded} ${styles.shadowSm}`}>
+              <p className={`${styles.lead} ${styles.marginBottom0}`}>
                 &quot;When you support small local business you&apos;re not
                 helping a CEO buy a third vacation home or another new car,
                 you&apos;re directly helping local families meet everyday needs,
@@ -18,7 +19,7 @@ const MissionStatement = () => {
                 basic needs and keep the money you spend locally making our
                 community more vibrant and resilient.&quot;
               </p>
-              <footer className="blockquote-footer mt-3">Jonathan</footer>
+              <footer className={`${styles.blockquoteFooter} ${styles.marginTop3}`}>Jonathan</footer>
             </blockquote>
           </div>
         </div>

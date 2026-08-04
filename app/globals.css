@@ -6,12 +6,6 @@
   --brand-neutral-light: #f4f1de;
   --brand-neutral-dark: #3d405b;
   --brand-success: #81b29a;
-
-  --bs-primary: var(--brand-primary);
-  --bs-secondary: var(--brand-secondary);
-  --bs-success: var(--brand-success);
-  --bs-light: var(--brand-neutral-light);
-  --bs-dark: var(--brand-neutral-dark);
 }
 
 body {

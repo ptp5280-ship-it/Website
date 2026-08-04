@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import styles from './ArticleList.module.css';
 
 type Article = {
   id: number;
@@ -17,22 +18,22 @@ type ArticleListProps = {
 
 export default function ArticleList({ articles }: ArticleListProps) {
   return (
-    <div className="row">
+    <div className={styles.row}>
       {articles.map((article) => (
-        <div className="col-md-4" key={article.id}>
-          <div className="card mb-4">
+        <div className={styles.colMd4} key={article.id}>
+          <div className={styles.articleCard}>
             <Image
               src={article.image_url}
               alt={article.title}
-              className="card-img-top"
+              className={styles.cardImgTop}
               width={400}
               height={225}
               style={{ objectFit: 'cover' }}
             />
-            <div className="card-body">
-              <h5 className="card-title">{article.title}</h5>
-              <p className="card-text">{article.excerpt}</p>
-              <Link href={`/${article.slug}`} className="btn btn-primary">
+            <div className={styles.cardBody}>
+              <h5 className={styles.cardTitle}>{article.title}</h5>
+              <p className={styles.cardText}>{article.excerpt}</p>
+              <Link href={`/${article.slug}`} className={styles.readMoreButton}>
                 Read More
               </Link>
             </div>

@@ -1,7 +1,6 @@
-
 import { notFound } from "next/navigation";
 import React from 'react';
-import { services as serviceData } from '@/app/lib/schema';
+import { services as serviceData } from '@/app/lib/services';
 import Link from "next/link";
 
 // Define the shape of the content for each service page
