@@ -1,14 +1,14 @@
 .servicesSection {
   width: 100%;
-  padding: 4rem 1rem;
+  padding: 4rem 2rem;
   background-color: var(--brand-neutral-light);
   display: flex;
   justify-content: center;
 }
 
-.servicesSection .servicesContainer {
+.servicesContainer {
+  width: 100%;
   max-width: 1200px;
-  padding: 0 1rem;
 }
 
 .titleContainer {
@@ -47,7 +47,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%; /* Ensure cards in a row are the same height */
+  height: 100%;
 }
 
 .serviceCard:hover {

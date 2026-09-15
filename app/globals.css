@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --brand-primary: #3a506b;
   --brand-secondary: #ffdab9;
@@ -124,11 +130,6 @@ h6 {
   to {
     transform: translate(calc(-50% - 0.5rem));
   }
-}
-
-.card_container {
-  width: 350px;
-  margin: 0 1rem;
 }
 
 .blog-post-container {

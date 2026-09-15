@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Services from '../components/Services'; // Adjust the import path
+import Services from '../components/Services';
 
 export const metadata = {
   title: 'Our Services | Peach Tree Plumbing',
@@ -9,14 +9,16 @@ export const metadata = {
 
 const ServicesPage = () => {
   return (
-    <div className="container mt-5 py-5">
-        <header className="mb-4 text-center">
-            <h1 className="display-4 fw-bold">Our Services</h1>
-            <p className="lead">Providing expert, reliable plumbing solutions for your home and business. Explore our services below to find the right one for you.</p>
-        </header>
-        <hr className="my-4" />
-        <Services />
-    </div>
+    <>
+      <div className="container mt-5 py-5">
+          <header className="mb-4 text-center">
+              <h1 className="display-4 fw-bold">Our Services</h1>
+              <p className="lead">Providing expert, reliable plumbing solutions for your home and business. Explore our services below to find the right one for you.</p>
+          </header>
+          <hr className="my-4" />
+      </div>
+      <Services />
+    </>
   );
 };
 

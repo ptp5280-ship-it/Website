@@ -90,7 +90,7 @@ const Services = () => {
               <Link href={`/services/${slug}`} key={index} className={styles.serviceCardLink}>
                 <div className={styles.serviceCard}>
                   <div className={styles.serviceIcon}>{service.icon}</div>
-                  <h3 className={styles.serviceTitle}>{service.title}</h3>
+                  <h3>{service.title}</h3>
                   <p className={styles.serviceDescription}>
                     {service.description}
                   </p>
