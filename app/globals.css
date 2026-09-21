@@ -15,22 +15,32 @@
 }
 
 body {
-  font-family: var(--font-lato), sans-serif;
+  font-family: var(--font-roboto-flex), sans-serif;
   background-color: var(--brand-neutral-light);
   color: var(--brand-neutral-dark);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-top: 120px; /* Taller padding for mobile navbar */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-lilita-one), sans-serif;
+@media (min-width: 769px) {
+  body {
+    padding-top: 85px; /* Shorter padding for desktop navbar */
+  }
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px; /* You can adjust this value as needed */
+  object-fit: cover;
+}
+
+
+.post-meta {
   color: var(--brand-primary);
+  font-style: italic;
+  font-size: 0.9em;
 }
 
 .custom-btn {
@@ -114,6 +124,7 @@ h6 {
   flex-wrap: nowrap;
   width: max-content;
   animation: scroll 60s linear infinite;
+  transition: animation-play-state 0.3s ease;
 }
 
 .scroller[data-animated='true'] .scroller__inner {
@@ -132,11 +143,6 @@ h6 {
   }
 }
 
-.blog-post-container {
-  padding-top: 80px;
-  overflow-x: hidden;
-}
-
 @media (min-width: 769px) {
   .hero-image-desktop {
     display: block;
@@ -148,10 +154,6 @@ h6 {
 }
 
 @media (max-width: 768px) {
-  body {
-    padding-top: 60px; /* Adjust this value based on the height of your navbar */
-  }
-
   .hero {
     flex-direction: column;
     text-align: center;

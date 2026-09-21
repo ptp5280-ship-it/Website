@@ -35,7 +35,7 @@ const Testimonials = () => {
                   <FaStar key={i} />
                 ))}
               </div>
-              <p className={styles.testimonialText}>"{testimonial.quote}"</p>
+              <p className={styles.testimonialText}>&quot;{testimonial.quote}&quot;</p>
               <p className={styles.testimonialAuthor}>- {testimonial.name}</p>
             </div>
           ))}

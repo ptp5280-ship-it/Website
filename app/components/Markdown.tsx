@@ -6,7 +6,15 @@ import ReactMarkdown, { Components } from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import MarkdownImage from './MarkdownImage.client';
-import { Element } from 'hast'; // Import the Element type
+import { Element } from 'hast';
+import styles from '../styles/Markdown.module.css';
+import { Lilita_One } from 'next/font/google';
+
+const lilitaOne = Lilita_One({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-lilita-one',
+});
 
 // Define the type for the context value
 type FirstImageContextType = [boolean, () => void];
@@ -66,13 +74,15 @@ const Markdown: React.FC<MarkdownProps> = ({ content }) => {
 
   return (
     <FirstImageContext.Provider value={[firstImageRendered, markFirstImageRendered]}>
-      <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeRaw]}
-        components={components}
-      >
-        {content}
-      </ReactMarkdown>
+      <div className={`${styles.markdownContent} ${lilitaOne.variable}`}>
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          rehypePlugins={[rehypeRaw]}
+          components={components}
+        >
+          {content}
+        </ReactMarkdown>
+      </div>
     </FirstImageContext.Provider>
   );
 };

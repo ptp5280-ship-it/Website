@@ -26,7 +26,6 @@ const MarkdownImage: React.FC<MarkdownImageProps> = ({
       height={height}
       priority={isPriority}
       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      style={{ maxWidth: '100%', height: 'auto' }}
     />
   );
 };

@@ -1,53 +1,44 @@
-/*
-This file contains the styling for all markdown content.
-It ensures that all blog posts have a consistent look and feel.
-*/
-
-.markdown-content h1,
-.markdown-content h2,
-.markdown-content h3,
-.markdown-content h4,
-.markdown-content h5,
-.markdown-content h6 {
-  color: var(--brand-primary);
-  margin-top: 2.5rem;
-  margin-bottom: 1.5rem;
+div.markdownContent h1,
+div.markdownContent h2,
+div.markdownContent h3,
+div.markdownContent h4,
+div.markdownContent h5,
+div.markdownContent h6 {
   font-family: var(--font-lilita-one), sans-serif;
-  font-weight: 700;
-  line-height: 1.4;
+  color: var(--brand-primary);
 }
 
-.markdown-content h1 {
+div.markdownContent h1 {
   font-size: 2.5rem;
 }
-.markdown-content h2 {
+div.markdownContent h2 {
   font-size: 2.2rem;
 }
-.markdown-content h3 {
+div.markdownContent h3 {
   font-size: 1.9rem;
 }
-.markdown-content h4 {
+div.markdownContent h4 {
   font-size: 1.6rem;
 }
-.markdown-content h5 {
+div.markdownContent h5 {
   font-size: 1.3rem;
 }
-.markdown-content h6 {
+div.markdownContent h6 {
   font-size: 1.1rem;
 }
 
-.markdown-content p {
+div.markdownContent p {
   margin-bottom: 1.5rem;
 }
 
-.markdown-content a {
+div.markdownContent a {
   color: var(--brand-accent);
   text-decoration: none;
   position: relative;
   transition: color 0.3s ease;
 }
 
-.markdown-content a::after {
+div.markdownContent a::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -60,26 +51,26 @@ It ensures that all blog posts have a consistent look and feel.
   transition: transform 0.3s ease-out;
 }
 
-.markdown-content a:hover {
+div.markdownContent a:hover {
   color: var(--brand-accent-dark);
 }
 
-.markdown-content a:hover::after {
+div.markdownContent a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
-.markdown-content ul,
-.markdown-content ol {
+div.markdownContent ul,
+div.markdownContent ol {
   margin-bottom: 1.5rem;
   padding-left: 1.8rem;
 }
 
-.markdown-content li {
+div.markdownContent li {
   margin-bottom: 0.8rem;
 }
 
-.markdown-content blockquote {
+div.markdownContent blockquote {
   border-left: 5px solid var(--brand-accent);
   padding: 1.5rem;
   margin: 2rem 0;
@@ -90,7 +81,7 @@ It ensures that all blog posts have a consistent look and feel.
   position: relative;
 }
 
-.markdown-content blockquote::before {
+div.markdownContent blockquote::before {
   content: '\201C';
   font-family: 'Georgia', serif;
   font-size: 4rem;
@@ -101,7 +92,7 @@ It ensures that all blog posts have a consistent look and feel.
   left: 10px;
 }
 
-.markdown-content hr {
+div.markdownContent hr {
   border: none;
   height: 2px;
   background: linear-gradient(
@@ -113,7 +104,7 @@ It ensures that all blog posts have a consistent look and feel.
   opacity: 0.6;
 }
 
-.markdown-content code {
+div.markdownContent code {
   background-color: #e8e8e8;
   padding: 0.3rem 0.5rem;
   border-radius: 6px;
@@ -122,7 +113,7 @@ It ensures that all blog posts have a consistent look and feel.
   font-size: 0.9em;
 }
 
-.markdown-content pre {
+div.markdownContent pre {
   background-color: #2d2d2d;
   color: #f8f8f2;
   padding: 1.5rem;
@@ -131,38 +122,54 @@ It ensures that all blog posts have a consistent look and feel.
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.markdown-content pre code {
+div.markdownContent pre code {
   background-color: transparent;
   padding: 0;
   color: inherit;
   font-size: 0.9em;
 }
 
-.markdown-content table {
+div.markdownContent table {
   width: 100%;
   border-collapse: collapse;
   margin: 2rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.markdown-content th,
-.markdown-content td {
+div.markdownContent th,
+div.markdownContent td {
   border: 1px solid #e0e0e0;
   padding: 1rem;
   text-align: left;
 }
 
-.markdown-content th {
+div.markdownContent th {
   background-color: #f7f7f7;
   font-weight: 700;
   color: var(--brand-primary);
   font-family: var(--font-lilita-one), sans-serif;
 }
 
-.markdown-content tr:nth-child(even) {
+div.markdownContent tr:nth-child(even) {
   background-color: #fdfdfd;
 }
 
-.markdown-content tr:hover {
+.centeredImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.markdownContent tr:hover {
   background-color: #f5f5f5;
+}
+
+div.markdownContent img {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }

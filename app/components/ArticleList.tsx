@@ -33,7 +33,7 @@ export default function ArticleList({ articles }: ArticleListProps) {
             <div className={styles.cardBody}>
               <h5 className={styles.cardTitle}>{article.title}</h5>
               <p className={styles.cardText}>{article.excerpt}</p>
-              <Link href={`/${article.slug}`} className={styles.readMoreButton}>
+              <Link href={`/${article.slug}`} className={styles.btn}>
                 Read More
               </Link>
             </div>

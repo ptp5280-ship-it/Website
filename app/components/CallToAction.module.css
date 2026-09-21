@@ -1,108 +1,60 @@
 .callToAction {
   text-align: center;
-  padding: 3rem;
-  background-color: #f8f9fa;
+  padding: 4rem 2rem;
+  background-color: var(--brand-secondary);
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
+.title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--brand-primary);
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: var(--brand-neutral-dark);
+  max-width: 800px;
   margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
 }
 
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
+.ctaButton {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--brand-accent);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
+.ctaButton:hover {
+  background-color: var(--brand-accent-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
-.fwBold {
-  font-weight: 700;
-}
-
-.ctaLead {
-  font-size: 1.25rem;
-  font-weight: 300;
-  margin-bottom: 1.5rem;
-}
-
-.desktopButton {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .desktopButton {
+.phoneNumber {
     display: block;
-  }
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--brand-primary);
 }
 
-.mobileButton {
-  display: block;
+.phoneNumber a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-@media (min-width: 768px) {
-  .mobileButton {
-    display: none;
-  }
-}
-
-.desktopCTAButton {
-  display: inline-block;
-  font-weight: 400;
-  color: #fff;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: #007bff;
-  border: 1px solid #007bff;
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  border-radius: 0.3rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.mobileCTAButton {
-  display: inline-block;
-  font-weight: 400;
-  color: #fff;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: #007bff;
-  border: 1px solid #007bff;
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  border-radius: 0.3rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  width: 100%;
+.phoneNumber a:hover {
+    color: var(--brand-accent);
 }

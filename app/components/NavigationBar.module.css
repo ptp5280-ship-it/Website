@@ -1,3 +1,4 @@
+
 .fixedNavbar {
   background-color: var(--brand-primary);
   font-family: var(--font-lilita-one), sans-serif;
@@ -58,7 +59,7 @@
 }
 
 .phoneLink {
-  color: white;
+  color: var(--brand-neutral-light);
   /* Desktop font size */
   font-size: 1.75rem;
   white-space: nowrap;

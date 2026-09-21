@@ -1,59 +1,30 @@
-import type { Metadata, Viewport } from 'next';
-import { Lilita_One, Lato } from 'next/font/google';
+import React from 'react';
 import './globals.css';
-import './styles/markdown.css';
-import NavigationBar from '@/app/components/NavigationBar';
-import Footer from '@/app/components/Footer';
-import {
-  SITE_URL,
-  SITE_NAME,
-  SITE_DESCRIPTION,
-} from '@/app/lib/config';
+import { NavigationBar } from './components/NavigationBar';
+import { Footer } from './components/Footer';
+import { Lilita_One, Roboto_Flex } from 'next/font/google';
 
 const lilitaOne = Lilita_One({
-  subsets: ['latin'],
   weight: '400',
+  subsets: ['latin'],
   variable: '--font-lilita-one',
 });
 
-const lato = Lato({
+const robotoFlex = Roboto_Flex({
   subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-lato',
+  variable: '--font-roboto-flex',
 });
-
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-  title: SITE_NAME,
-  description: SITE_DESCRIPTION,
-  robots: {
-    index: true,
-    follow: true,
-  },
-  openGraph: {
-    images: '/PTP-LOGO.jpg',
-  },
-};
-
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  themeColor: '#ffffff',
-};
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body
-        className={`layout-body ${lilitaOne.variable} ${lato.variable}`}
-      >
+    <html lang='en'>
+      <body className={`${robotoFlex.variable} ${lilitaOne.variable}`}>
         <NavigationBar />
-        <main>{children}</main>
+        <main className='container my-5'>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

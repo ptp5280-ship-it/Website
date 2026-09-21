@@ -2,16 +2,17 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from './Footer.module.css';
-import { FaInstagram, FaYelp } from 'react-icons/fa';
+import { FaInstagram, FaYelp, FaGithub } from 'react-icons/fa';
 import {
   CONTACT_EMAIL,
   CONTACT_PHONE_HREF,
   GOOGLE_BUSINESS_PROFILE_URL,
   INSTAGRAM_URL,
   YELP_URL,
+  GITHUB_URL
 } from '@/app/lib/config';
 
-const Footer: React.FC = () => {
+export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const [isMobile, setIsMobile] = React.useState(false);
 
@@ -79,6 +80,14 @@ const Footer: React.FC = () => {
             >
               <FaYelp />
             </a>
+            <a
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialIcon}
+            >
+              <FaGithub />
+            </a>
           </div>
         </div>
       </div>
@@ -102,5 +111,3 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-
-export default Footer;

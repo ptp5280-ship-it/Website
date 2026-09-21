@@ -23,7 +23,7 @@
 }
 
 .testimonialCard {
-  background-color: #ffffff;
+  background-color: var(--brand-neutral-light);
   padding: 2.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -46,6 +46,6 @@
 }
 
 .starRating {
-  color: #ffc107;
+  color: var(--brand-accent);
   margin-bottom: 1.5rem;
 }

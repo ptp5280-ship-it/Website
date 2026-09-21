@@ -5,7 +5,7 @@ import Link from 'next/link';
 import styles from './NavigationBar.module.css';
 import { SITE_NAME, CONTACT_PHONE, CONTACT_PHONE_HREF } from '@/app/lib/config';
 
-const NavigationBar = () => {
+export const NavigationBar = () => {
   return (
     <nav className={styles.fixedNavbar}>
       <div className={styles.navContainer}>
@@ -19,5 +19,3 @@ const NavigationBar = () => {
     </nav>
   );
 };
-
-export default NavigationBar;

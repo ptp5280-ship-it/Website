@@ -5,9 +5,29 @@ import { notFound } from 'next/navigation';
 import Markdown from '../components/Markdown';
 import { Metadata } from 'next';
 import FAQ from '../components/FAQ';
-import '../styles/markdown.css'; // <--- CORRECTIVE ACTION
+import styles from '../styles/Markdown.module.css';
 
 export const revalidate = 60;
+
+export async function generateStaticParams() {
+  const { data: posts, error } = await supabase
+    .from('blog_posts')
+    .select('slug')
+    .eq('is_published', true);
+
+  if (error) {
+    console.error('Error fetching slugs for generateStaticParams:', error);
+    return [];
+  }
+
+  if (!posts) {
+      return [];
+  }
+
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
 type Props = {
   params: { slug: string };
@@ -89,7 +109,6 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
         }))
       : [];
 
-  // --- Start of Centralized JSON-LD Schema ---
   const schemaGraph: Record<string, unknown>[] = [];
 
   schemaGraph.push({
@@ -155,15 +174,15 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
   };
 
   return (
-    <div className="container my-5 blog-post-container">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <div className="row">
-        <div className="col-lg-8 offset-lg-2">
+    <div className="row">
+      <div className="col-md-8 offset-md-2">
+        <article>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
           <h1 className="fw-bold mb-4 text-center">{post.title}</h1>
-          <div className="text-muted text-center mb-5">
+          <div className="post-meta text-center mb-5">
             <span>
               Posted on {new Date(post.created_at).toLocaleDateString()}
             </span>
@@ -178,11 +197,9 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
             width={800}
             height={400}
             priority={true}
-            className="img-fluid rounded mb-5 shadow"
+            className={`${styles.centeredImage} img-fluid rounded mb-5 shadow`}
           />
-          <div className="markdown-content">
-            <Markdown content={post.content} />
-          </div>
+          <Markdown content={post.content} />
 
           {faqItems.length > 0 && (
             <div className="mt-5">
@@ -192,7 +209,7 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
               <FAQ faqs={faqItems} />
             </div>
           )}
-        </div>
+        </article>
       </div>
     </div>
   );

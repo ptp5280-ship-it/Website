@@ -1,20 +1,14 @@
-'use client';
 
 import Link from 'next/link';
-import { useEffect } from 'react';
 
 export default function NotFound() {
-  useEffect(() => {
-    document.title = '404 - Page Not Found | Peach Tree Plumbing';
-  }, []);
-
   return (
     <div className="container text-center py-5">
       <div className="row justify-content-center">
         <div className="col-md-8">
           <h1
-            className="display-1 fw-bold"
-            style={{ color: 'var(--primary-color)' }}
+            className="display-1"
+            style={{ color: 'var(--brand-primary)' }}
           >
             404
           </h1>

@@ -1,60 +1,86 @@
-.hero {
-  position: relative;
-  color: #fff;
-  text-align: center;
+.heroContainer {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 4rem 1rem;
-  background-color: #007bff;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: var(--brand-primary);
+  color: var(--brand-neutral-light);
   width: 100%;
-  max-width: 1140px;
-}
-
-.heroImageMobile {
-  display: none;
+  position: relative;
 }
 
 .heroContent {
-  text-align: left;
+  flex: 1;
+  padding-right: 2rem;
 }
 
-.heroContent h1 {
-  font-size: 2.5rem;
-  font-weight: 300;
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
   line-height: 1.2;
 }
 
-.heroContent p {
-  font-size: 1.25rem;
+.heroSubtitle {
+  font-size: 1.5rem;
   font-weight: 300;
+  margin-bottom: 2rem;
+  max-width: 600px;
 }
 
-.heroImageDesktop {
-  display: block;
+.heroImage {
+  flex: 1;
+  display: none; 
 }
 
-.imgFluid {
+.heroImage img {
   max-width: 100%;
   height: auto;
+  border-radius: 12px;
+}
+
+.ctaButton {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--brand-accent);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ctaButton:hover {
+  background-color: var(--brand-accent-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 769px) {
+  .heroImage {
+    display: block;
+  }
 }
 
 @media (max-width: 768px) {
-  .hero {
-    padding: 2rem 1rem;
+  .heroContainer {
     flex-direction: column;
-  }
-
-  .heroImageMobile {
-    display: block;
-    margin-bottom: 2rem;
+    text-align: center;
+    padding: 3rem 1.5rem;
   }
 
   .heroContent {
-    text-align: center;
+    padding-right: 0;
+    margin-bottom: 2rem;
   }
 
-  .heroImageDesktop {
-    display: none;
+  .heroTitle {
+    font-size: 2.8rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.3rem;
   }
 }

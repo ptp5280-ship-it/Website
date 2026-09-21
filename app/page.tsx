@@ -1,10 +1,9 @@
-
 import React from 'react';
 import HeroBanner from './components/HeroBanner';
 import Services from './components/Services';
 import Testimonials from './components/Testimonials';
 import MissionStatement from './components/MissionStatement';
-import ArticleCarousel from './components/ArticleCarousel';
+import ArticleCarousel from './components/ArticleCarousel.client';
 import FAQ from './components/FAQ';
 import { defaultFaqs } from './lib/faqData';
 import { peachTreePlumbingSchema } from './lib/schema';

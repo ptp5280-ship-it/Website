@@ -1,127 +1,43 @@
 .missionSection {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.py5 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.bgLight {
-  background-color: #f8f9fa;
+  padding: 4rem 2rem;
+  background-color: var(--brand-neutral-light);
 }
 
 .container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
-.textCenter {
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.marginBottom5 {
-  margin-bottom: 3rem;
-}
-
-.fwBold {
-  font-weight: 700;
-}
-
-.textPrimary {
-  color: #007bff;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-.colLg10 {
-  position: relative;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-@media (min-width: 992px) {
-  .colLg10 {
-    flex: 0 0 83.333333%;
-    max-width: 83.333333%;
-  }
-}
-
-.mxAuto {
-  margin-right: auto;
-  margin-left: auto;
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--brand-primary);
+  margin-bottom: 2rem;
 }
 
 .blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--brand-neutral-dark);
+  margin: 0;
+  padding: 2rem;
+  background-color: var(--brand-neutral-light);
+  border-left: 5px solid var(--brand-accent);
+  position: relative;
+}
+
+.blockquote p {
   margin-bottom: 1rem;
-  font-size: 1.25rem;
-}
-
-.bgWhite {
-  background-color: #fff;
-}
-
-.p5 {
-  padding: 3rem;
-}
-
-.rounded {
-  border-radius: 0.25rem;
-}
-
-.shadowSm {
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-}
-
-.lead {
-  font-size: 1.25rem;
-  font-weight: 300;
-}
-
-.marginBottom0 {
-  margin-bottom: 0;
 }
 
 .blockquoteFooter {
-  display: block;
-  font-size: 80%;
-  color: #6c757d;
+  font-size: 1.1rem;
+  font-style: normal;
+  color: var(--brand-primary);
+  font-weight: bold;
 }
 
-.marginTop3 {
-  margin-top: 1rem;
+.blockquoteFooter cite {
+  font-style: normal;
 }
