@@ -174,42 +174,44 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
   };
 
   return (
-    <div className="row">
-      <div className="col-md-8 offset-md-2">
-        <article>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-          />
-          <h1 className="fw-bold mb-4 text-center">{post.title}</h1>
-          <div className="post-meta text-center mb-5">
-            <span>
-              Posted on {new Date(post.created_at).toLocaleDateString()}
-            </span>
-            {post.read_time_minutes && <span className="mx-2">·</span>}
-            {post.read_time_minutes && (
-              <span>{post.read_time_minutes} min read</span>
-            )}
-          </div>
-          <Image
-            src={post.image || 'https://via.placeholder.com/800x400'}
-            alt={post.title}
-            width={800}
-            height={400}
-            priority={true}
-            className={`${styles.centeredImage} img-fluid rounded mb-5 shadow`}
-          />
-          <Markdown content={post.content} />
-
-          {faqItems.length > 0 && (
-            <div className="mt-5">
-              <h2 className="fw-bold mb-4 text-center">
-                Frequently Asked Questions
-              </h2>
-              <FAQ faqs={faqItems} />
+    <div className="container mt-5">
+      <div className="row">
+        <div className="col-md-8 offset-md-2">
+          <article>
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <h1 className="fw-bold mb-4 text-center">{post.title}</h1>
+            <div className="post-meta text-center mb-5">
+              <span>
+                Posted on {new Date(post.created_at).toLocaleDateString()}
+              </span>
+              {post.read_time_minutes && <span className="mx-2">·</span>}
+              {post.read_time_minutes && (
+                <span>{post.read_time_minutes} min read</span>
+              )}
             </div>
-          )}
-        </article>
+            <Image
+              src={post.image || 'https://via.placeholder.com/800x400'}
+              alt={post.title}
+              width={800}
+              height={400}
+              priority={true}
+              className={`${styles.centeredImage} img-fluid rounded mb-5 shadow`}
+            />
+            <Markdown content={post.content} />
+
+            {faqItems.length > 0 && (
+              <div className="mt-5">
+                <h2 className="fw-bold mb-4 text-center">
+                  Frequently Asked Questions
+                </h2>
+                <FAQ faqs={faqItems} />
+              </div>
+            )}
+          </article>
+        </div>
       </div>
     </div>
   );

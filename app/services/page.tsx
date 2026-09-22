@@ -1,24 +1,19 @@
-
 import React from 'react';
-import Services from '../components/Services';
+import { Metadata } from 'next';
+import ServicesGrid from '../components/ServicesGrid';
 
-export const metadata = {
-  title: 'Our Services | Peach Tree Plumbing',
-  description: 'Explore the comprehensive range of expert plumbing services offered by Peach Tree Plumbing in the Denver metro area, from emergency repairs to full-scale installations.',
+export const metadata: Metadata = {
+  title: 'Our Plumbing Services in Denver, CO',
+  description:
+    'Explore our wide range of expert plumbing services in the Denver metro area, from emergency repairs to residential and commercial solutions.',
 };
 
 const ServicesPage = () => {
   return (
-    <>
-      <div className="container mt-5 py-5">
-          <header className="mb-4 text-center">
-              <h1 className="display-4 fw-bold">Our Services</h1>
-              <p className="lead">Providing expert, reliable plumbing solutions for your home and business. Explore our services below to find the right one for you.</p>
-          </header>
-          <hr className="my-4" />
-      </div>
-      <Services />
-    </>
+    <div className="container mt-5">
+      <h1 className="fw-bold text-center mb-5">Our Services</h1>
+      <ServicesGrid />
+    </div>
   );
 };
 

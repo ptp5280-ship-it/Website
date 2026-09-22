@@ -1,15 +1,25 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { supabase } from '../lib/supabase';
+import { supabase } from '../../lib/supabase';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 
 export const revalidate = 60;
 
+interface BlogPost {
+  id: string | number;
+  slug: string;
+  image: string | null;
+  title: string;
+  excerpt: string;
+  created_at: string;
+  read_time_minutes: number | null;
+}
+
 async function getCategory(slug: string) {
   const { data, error } = await supabase
-    .from('categories')
+    .from('blog_categories')
     .select('*, blog_posts(*)')
     .eq('slug', slug)
     .eq('blog_posts.is_published', true)
@@ -25,7 +35,7 @@ async function getCategory(slug: string) {
 
 export async function generateStaticParams() {
   const { data: categories, error } = await supabase
-    .from('categories')
+    .from('blog_categories')
     .select('slug');
 
   if (error) {
@@ -77,7 +87,7 @@ const CategoryPage = async ({ params }: { params: { slug: string } }) => {
     <div className="container mt-5">
       <h1 className="fw-bold text-center mb-5">{name}</h1>
       <div className="row">
-        {blog_posts.map((post) => (
+        {blog_posts.map((post: BlogPost) => (
           <div key={post.id} className="col-md-6 col-lg-4 mb-4">
             <div className="card h-100 shadow-sm">
               <Link href={`/${post.slug}`} className="text-decoration-none">
