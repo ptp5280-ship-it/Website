@@ -13,7 +13,6 @@ const FAQ = ({ faqs = defaultFaqs }: { faqs?: Faq[] }) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  // Show the first 5 FAQs by default, or all if the button is clicked
   const displayedFaqs = showAll ? faqs : faqs.slice(0, 5);
 
   return (
@@ -32,9 +31,10 @@ const FAQ = ({ faqs = defaultFaqs }: { faqs?: Faq[] }) => {
               {activeIndex === index ? '−' : '+'}
             </span>
           </div>
-          {activeIndex === index && (
-            <div className={styles.faqAnswer}>{faq.answer}</div>
-          )}
+          <div
+            className={`${styles.faqAnswer} ${activeIndex === index ? styles.open : ''}`}>
+            {faq.answer}
+          </div>
         </div>
       ))}
       {faqs.length > 5 && (
