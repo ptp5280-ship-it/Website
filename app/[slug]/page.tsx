@@ -88,7 +88,7 @@ async function getBlogPost(slug: string) {
     .select('*')
     .eq('slug', slug)
     .eq('is_published', true)
-    .single();
+    .maybeSingle();
 
   if (error || !data) {
     console.error('Error fetching blog post:', error);

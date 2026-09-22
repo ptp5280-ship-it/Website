@@ -22,8 +22,13 @@ const ArticleCarouselClient: React.FC = () => {
 
   useEffect(() => {
     const fetchArticles = async () => {
-      const fetchedArticles = await getAllPosts();
-      setArticles(fetchedArticles);
+      try {
+        const fetchedArticles = await getAllPosts();
+        setArticles(fetchedArticles || []);
+      } catch (error) {
+        console.error("Failed to fetch articles:", error);
+        setArticles([]);
+      }
     };
 
     fetchArticles();
@@ -38,20 +43,37 @@ const ArticleCarouselClient: React.FC = () => {
 
     if (!scrollerInner) return;
 
-    const articleElements = Array.from(
+    if (animation.current) {
+      animation.current.kill();
+    }
+
+    const allArticleCards = Array.from(
       scrollerInner.querySelectorAll(`.${styles.articleCard}`)
     );
-    const totalWidth = articleElements.reduce((acc, article) => acc + article.clientWidth, 0);
 
-    animation.current = gsap.to(scrollerInner, {
-      x: -totalWidth / 2,
-      duration: articleElements.length * 5,
-      ease: 'linear',
-      repeat: -1,
-      modifiers: {
-        x: (x) => `${parseFloat(x).toFixed(2)}px`,
-      },
-    });
+    if (allArticleCards.length === 0) return;
+
+    const timeoutId = setTimeout(() => {
+      const loopWidth = articles.reduce((acc, article, index) => {
+        const card = allArticleCards[index] as HTMLElement;
+        if (!card) return acc;
+        const style = window.getComputedStyle(card);
+        const marginRight = parseInt(style.marginRight, 10) || 0;
+        return acc + card.offsetWidth + marginRight;
+      }, 0);
+
+      if (loopWidth === 0) return;
+
+      animation.current = gsap.to(scrollerInner, {
+        x: -loopWidth,
+        duration: articles.length * 8,
+        ease: 'linear',
+        repeat: -1,
+      });
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
+
   }, { scope: scrollerRef, dependencies: [articles] });
 
   useEffect(() => {
@@ -65,18 +87,30 @@ const ArticleCarouselClient: React.FC = () => {
   }, [isPaused]);
 
   const handleScroll = (scrollOffset: number) => {
-    if (scrollerRef.current) {
-      const scroller = scrollerRef.current;
-      gsap.to(scroller, { 
-        scrollLeft: scroller.scrollLeft + scrollOffset, 
-        duration: 0.8, 
-        ease: 'power3.inOut' 
-      });
+    if (animation.current) {
+      animation.current.pause();
+      
+      const scrollerInner = scrollerRef.current?.querySelector(
+        `.${styles.scrollerInner}`
+      ) as HTMLDivElement;
+
+      if (scrollerInner) {
+        gsap.to(scrollerInner, {
+          x: `+=${scrollOffset}`,
+          duration: 0.5,
+          ease: 'power2.inOut',
+          onComplete: () => {
+            if (!isPaused) {
+              animation.current?.resume();
+            }
+          }
+        });
+      }
     }
   };
 
   if (!articles || articles.length === 0) {
-    return <p>No articles found.</p>;
+    return <p className="text-center p-5">No articles found.</p>;
   }
 
   const extendedArticles = [...articles, ...articles];
@@ -87,7 +121,7 @@ const ArticleCarouselClient: React.FC = () => {
       <div className={styles.carousel}>
         <button 
           className={`${styles.arrow} ${styles.left}`}
-          onClick={() => handleScroll(-350)} 
+          onClick={() => handleScroll(350)} 
           aria-label="Scroll left"
         >
           &#x2190;
@@ -98,7 +132,7 @@ const ArticleCarouselClient: React.FC = () => {
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          <div className={`${styles.scrollerInner} ${isPaused ? styles.paused : ''}`}>
+          <div className={styles.scrollerInner}>
             {extendedArticles.map((article, index) => (
               <Link key={`${article.id}-${index}`} href={`/${article.slug}`} className={styles.articleCard}>
                 <h5 className={styles.articleTitle}>{article.title}</h5>
@@ -110,7 +144,7 @@ const ArticleCarouselClient: React.FC = () => {
         </div>
         <button 
           className={`${styles.arrow} ${styles.right}`}
-          onClick={() => handleScroll(350)} 
+          onClick={() => handleScroll(-350)} 
           aria-label="Scroll right"
         >
           &#x2192;

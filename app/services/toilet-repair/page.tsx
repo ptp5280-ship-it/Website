@@ -103,7 +103,7 @@ const ToiletRepairPage = () => {
               <span>Solving Your Toughest Toilet Troubles</span>
             </div>
             <div className={styles.markdownContent}>
-              <p>A malfunctioning toilet can be a major inconvenience and a source of stress. Whether you're dealing with a stubborn clog, a constant running sound, a leak at the base, or you’re ready to upgrade to a more efficient model, Peach Tree Plumbing has you covered. Our experienced plumbers can quickly diagnose the problem and provide a reliable, long-lasting solution.</p>
+              <p>A malfunctioning toilet can be a major inconvenience and a source of stress. Whether you&apos;re dealing with a stubborn clog, a constant running sound, a leak at the base, or you&apos;re ready to upgrade to a more efficient model, Peach Tree Plumbing has you covered. Our experienced plumbers can quickly diagnose the problem and provide a reliable, long-lasting solution.</p>
               <h2 className="fw-bold mt-5 mb-3">Common Toilet Problems We Solve</h2>
               <ul>
                 <li><strong>Clogged Toilets:</strong> We can clear even the most stubborn clogs without damaging your pipes or toilet.</li>
@@ -111,7 +111,7 @@ const ToiletRepairPage = () => {
                 <li><strong>Leaky Toilets:</strong> Leaks around the base of the toilet can damage your flooring and subfloor. We can replace the wax ring and ensure a tight seal.</li>
                 <li><strong>New Toilet Installation:</strong> We can help you choose and install a new toilet that fits your needs and budget, including high-efficiency and comfort-height models.</li>
               </ul>
-              <p>Don’t let toilet troubles disrupt your life. Contact us for fast and professional toilet repair and installation services.</p>
+              <p>Don&apos;t let toilet troubles disrupt your life. Contact us for fast and professional toilet repair and installation services.</p>
             </div>
 
             {faqItems.length > 0 && (

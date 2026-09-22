@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const faqItems = [
   {
     question: "How do I know if my sump pump is working correctly?",
-    answer: "You can test your sump pump by pouring a bucket of water into the sump pit. The pump should kick on, remove the water, and then shut off. If it doesn\'t, or if it runs continuously, it needs professional attention.",
+    answer: "You can test your sump pump by pouring a bucket of water into the sump pit. The pump should kick on, remove the water, and then shut off. If it does not, or if it runs continuously, it needs professional attention.",
   },
   {
     question: "Should I have a battery backup for my sump pump?",
@@ -88,7 +88,7 @@ const SumpPumpPage = () => {
               <span>Your First Line of Defense Against Flooding</span>
             </div>
             <div className={styles.markdownContent}>
-              <p>A functional sump pump is a homeowner's best friend, especially in areas prone to heavy rain or snowmelt. It is your primary defense against basement flooding, which can cause catastrophic damage to your property. Peach Tree Plumbing provides comprehensive sump pump services, from installation to emergency repairs, to ensure your home stays dry and protected.</p>
+              <p>A functional sump pump is a homeowner&apos;s best friend, especially in areas prone to heavy rain or snowmelt. It is your primary defense against basement flooding, which can cause catastrophic damage to your property. Peach Tree Plumbing provides comprehensive sump pump services, from installation to emergency repairs, to ensure your home stays dry and protected.</p>
               <h2 className="fw-bold mt-5 mb-3">Our Sump Pump Solutions</h2>
               <ul>
                 <li><strong>Sump Pump Installation:</strong> We can install a new sump pump system, including the sump pit and discharge piping, to effectively manage groundwater.</li>
@@ -96,7 +96,7 @@ const SumpPumpPage = () => {
                 <li><strong>Battery Backup Systems:</strong> We strongly recommend and install battery backup pumps to ensure your system works even when the power goes out.</li>
                 <li><strong>Regular Maintenance:</strong> Annual testing and maintenance are key to ensuring your sump pump is ready when you need it most.</li>
               </ul>
-              <p>Don’t wait until it’s too late. Protect your home and your peace of mind with our professional sump pump services.</p>
+              <p>Don&apos;t wait until it’s too late. Protect your home and your peace of mind with our professional sump pump services.</p>
             </div>
 
             {faqItems.length > 0 && (
