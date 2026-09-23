@@ -26,7 +26,7 @@ export default async function CategoriesPage() {
   const categories = await getCategories();
 
   return (
-    <main className="container mt-5 pt-5">
+    <main>
       <div className="row justify-content-center">
         <div className="col-lg-8">
           <h1 className="display-4 font-lilita-one text-center mb-4">

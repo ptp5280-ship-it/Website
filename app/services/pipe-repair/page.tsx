@@ -81,7 +81,7 @@ const jsonLd = {
 
 const PipeRepairPage = () => {
   return (
-    <div className="container mt-5">
+    <>
        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -147,7 +147,7 @@ const PipeRepairPage = () => {
               <ol>
                 <li><strong>Assessment and Planning:</strong> We conduct a thorough inspection of your home and create a detailed plan to run the new pipes in the most efficient and least-disruptive way possible.</li>
                 <li><strong>Property Protection:</strong> We use drop cloths and plastic sheeting to protect your floors, furniture, and belongings.</li>
-                <li><strong>Strategic Access:</strong> We make small, precise cuts in the drywall to feed the new PEX tubing throughout the house. Our experience allows us to do this with a surgeon&apos;s precision, not a sledgehammer.</li>
+                <li><strong>Strategic Access:</strong> We make small, precise cuts in the drywall to feed the new PEX tubing throughout the house. Our experience allows us to do this with a surgeon's precision, not a sledgehammer.</li>
                 <li><strong>New System Installation:</strong> We run the new hot and cold lines and connect them to new, high-quality quarter-turn shut-off valves at every fixture.</li>
                 <li><strong>The Changeover:</strong> Once the new system is fully in place and pressure-tested, we make the final connection to your water main and fixtures, officially abandoning the old, defunct system. We strive to have your water service restored at the end of each workday.</li>
                 <li><strong>Inspection and Restoration:</strong> After the work is complete and inspected, the drywall can be repaired and painted, leaving no trace of the work behind besides a perfectly functioning plumbing system.</li>
@@ -168,7 +168,7 @@ const PipeRepairPage = () => {
           </article>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

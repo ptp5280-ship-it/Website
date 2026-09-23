@@ -2,7 +2,7 @@ import React from 'react';
 
 const CopyrightNotice = () => {
   return (
-    <div className="container mt-5">
+    <>
       <h1>Copyright Notice</h1>
       <p>
         Copyright © {new Date().getFullYear()} Peach Tree Plumbing. All rights
@@ -15,7 +15,7 @@ const CopyrightNotice = () => {
         modify, or create derivative works of any of the content without our
         prior written permission.
       </p>
-    </div>
+    </>
   );
 };
 

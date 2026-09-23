@@ -81,7 +81,7 @@ const jsonLd = {
 
 const BidetInstallationPage = () => {
   return (
-    <div className="container mt-5">
+    <div>
        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -130,7 +130,7 @@ const BidetInstallationPage = () => {
               <h2 className="fw-bold mt-5 mb-3">Why Professional Installation is Non-Negotiable</h2>
               <p>An improper bidet installation is a significant liability. As licensed plumbers, our process mitigates risks that the average DIY installer may not even be aware of.</p>
               <ul>
-                <li><strong>Water Connections:</strong> We use professional-grade T-valves and supply lines. We correctly torque all fittings to create a watertight seal without cracking the porcelain of your toilet or the delicate plastic threads on the bidet unit itself. This prevents slow leaks that can cause rot and mold in your subfloor.</li>
+                <li><strong>Water Connections:</strong> We use professional-grade T-valves and a supply lines. We correctly torque all fittings to create a watertight seal without cracking the porcelain of your toilet or the delicate plastic threads on the bidet unit itself. This prevents slow leaks that can cause rot and mold in your subfloor.</li>
                 <li><strong>Electrical Safety & Code Compliance:</strong> For electronic bidets, we ensure the installation of a dedicated, properly grounded GFCI outlet. This is not optional; it is a critical safety requirement by law to prevent the risk of electric shock in a wet environment. All our work is guaranteed to be compliant with Denver and Colorado plumbing and electrical codes.</li>
                 <li><strong>Pressure and Flow Rate:</strong> We assess your home&apos;s water pressure to ensure it is within the operating parameters of the bidet unit. Too high, and you risk damaging the bidet&apos;s internal components. Too low, and performance will be unsatisfactory.</li>
                 <li><strong>Addressing Hard Water:</strong> Denver&apos;s notoriously hard water can clog bidet nozzles and build up on heating elements. We can recommend and install bidets with built-in filters or self-cleaning functions that are better suited for our local water conditions, prolonging the life of your investment.</li>

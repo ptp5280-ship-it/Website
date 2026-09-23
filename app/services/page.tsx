@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const ServicesPage = () => {
   return (
-    <div className="container mt-5">
+    <div>
       <h1 className="fw-bold text-center mb-5">Our Services</h1>
       <ServicesGrid />
     </div>

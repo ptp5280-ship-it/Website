@@ -82,7 +82,7 @@ const jsonLd = {
 
 const EmergencyPlumbingPage = () => {
   return (
-    <div className="container mt-5">
+    <div>
        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -96,7 +96,7 @@ const EmergencyPlumbingPage = () => {
             </div>
             <div className={styles.markdownContent}>
               <p>In my decades as a master plumber in Denver, I can tell you that a true plumbing emergency is one of the most stressful events a homeowner can face. It&apos;s not just a leak or a lack of hot water, it’s a sudden, uncontrolled event that threatens your property, your safety, and your peace of mind. These events don’t respect business hours. They happen at 2 AM on a Tuesday or during a holiday dinner. Understanding what constitutes an emergency, what to do in the first critical minutes, and when to call a professional is knowledge every property owner should have.</p>
-              <p>This guide is written to provide clear, authoritative information from a professional’s perspective. Our emergency service isn&apos;t just about fixing a pipe; it&apos;s about rapid response, damage mitigation, and expert problem-solving under pressure.</p>
+              <p>This guide is written to provide clear, authoritative information from a professional’s perspective. Our emergency service isn&apos;t just aboutfixing a pipe; it&apos;s about rapid response, damage mitigation, and expert problem-solving under pressure.</p>
 
               <h2 className="fw-bold mt-5 mb-3">Defining a True Plumbing Emergency</h2>
               <p>Not every plumbing issue is an emergency, but the ones that are require immediate action. Delay can mean the difference between a simple repair and catastrophic water damage or a serious health hazard. These are the situations we classify as emergencies:</p>

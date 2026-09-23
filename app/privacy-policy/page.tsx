@@ -2,7 +2,7 @@ import React from 'react';
 
 const PrivacyPolicy = () => {
   return (
-    <div className="container mt-5">
+    <>
       <h1>Privacy Policy</h1>
       <p>
         This privacy policy explains how Peach Tree Plumbing collects, uses, and
@@ -43,7 +43,7 @@ const PrivacyPolicy = () => {
       <p>4210 S Galapago St</p>
       <p>Englewood, CO 80110</p>
       <p>Phone: 720-298-1900</p>
-    </div>
+    </>
   );
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Disclaimer = () => {
   return (
-    <div className="container mt-5">
+    <>
       <h1>Disclaimer</h1>
       <p>
         The information on this website is for general informational purposes
@@ -19,7 +19,7 @@ const Disclaimer = () => {
         damage whatsoever arising from loss of data or profits arising out of,
         or in connection with, the use of this website.
       </p>
-    </div>
+    </>
   );
 };
 

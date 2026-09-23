@@ -175,7 +175,7 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
   };
 
   return (
-    <div className="container mt-5">
+    <>
       <div className="row">
         <div className="col-md-8 offset-md-2">
           <article>
@@ -183,7 +183,6 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            <h1 className="fw-bold mb-4 text-center">{post.title}</h1>
             <div className="post-meta text-center mb-5">
               <span>
                 Posted on {new Date(post.created_at).toLocaleDateString()}
@@ -201,6 +200,7 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
               priority={true}
               className={`${styles.centeredImage} img-fluid rounded mb-5 shadow`}
             />
+            <h1 className="fw-bold mb-4 text-center">{post.title}</h1>
             <Markdown content={post.content} />
 
             {faqItems.length > 0 && (
@@ -214,7 +214,7 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
           </article>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

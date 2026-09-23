@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`${robotoFlex.variable} ${lilitaOne.variable}`}>
         <NavigationBar />
-        <main className='container my-5'>
+        <main className='container mt-5'>
           {children}
         </main>
         <Footer />

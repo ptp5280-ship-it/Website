@@ -81,7 +81,7 @@ const jsonLd = {
 
 const NaturalGasPlumbingPage = () => {
   return (
-    <div className="container mt-5">
+    <div>
        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -29,7 +29,7 @@ const faqItems = [
     answer: "A running toilet is most often caused by a faulty flapper that no longer seals properly or a malfunctioning fill valve. This constant water flow can waste over 200 gallons a day! Our plumbers can quickly diagnose the issue and replace the worn-out parts to stop the waste and save you money.",
   },
   {
-    question: "What's involved in installing a new toilet?",
+    question: "What&apos;s involved in installing a new toilet?",
     answer: "Our comprehensive toilet installation service includes carefully removing your old toilet, inspecting the flange and water supply line, professionally setting the new toilet with a high-quality wax ring, and ensuring it is perfectly level and functions flawlessly. We handle everything from start to finish.",
   },
   {
@@ -99,7 +99,7 @@ const jsonLd = {
 
 const ToiletRepairPage = () => {
   return (
-    <div className="container mt-5">
+    <>
        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -112,7 +112,7 @@ const ToiletRepairPage = () => {
               <span>Your Go-To Solution for All Toilet Troubles</span>
             </div>
             <div className={styles.markdownContent}>
-                <p>A malfunctioning toilet is more than just an inconvenience—it can disrupt your daily routine, waste significant amounts of water, and even lead to water damage. Whether you're dealing with a stubborn clog, a toilet that won't stop running, or you're considering an upgrade, Peach Tree Plumbing provides expert, reliable solutions in the Denver metro area.</p>
+                <p>A malfunctioning toilet is more than just an inconvenience—it can disrupt your daily routine, waste significant amounts of water, and even lead to water damage. Whether you&apos;re dealing with a stubborn clog, a toilet that won&apos;t stop running, or you&apos;re considering an upgrade, Peach Tree Plumbing provides expert, reliable solutions in the Denver metro area.</p>
                 
                 <h2 className="fw-bold mt-5 mb-3">Comprehensive Toilet Repair Services</h2>
                 <p>Our experienced plumbers have seen it all. We arrive with fully stocked trucks, ready to diagnose and resolve your toilet issue efficiently. Our services include:</p>
@@ -126,7 +126,7 @@ const ToiletRepairPage = () => {
                 <h2 className="fw-bold mt-5 mb-3">Professional Toilet Installation & Upgrades</h2>
                 <p>Ready to upgrade your bathroom with a new, more efficient toilet? We can help you select and install the perfect model for your home. We specialize in:</p>
                 <ul>
-                    <li><strong>High-Efficiency Toilets:</strong> Lower your water consumption and environmental footprint with a modern, low-flow toilet that doesn't sacrifice performance.</li>
+                    <li><strong>High-Efficiency Toilets:</strong> Lower your water consumption and environmental footprint with a modern, low-flow toilet that doesn&apos;t sacrifice performance.</li>
                     <li><strong>Comfort Height Toilets:</strong> These models are taller than standard toilets, making them more accessible and comfortable for many users.</li>
                     <li><strong>Dual-Flush Toilets:</strong> Gain control over your water usage with a dual-flush system, offering a partial flush for liquid waste and a full flush for solid waste.</li>
                 </ul>
@@ -154,7 +154,7 @@ const ToiletRepairPage = () => {
           </article>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

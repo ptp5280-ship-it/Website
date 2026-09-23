@@ -81,7 +81,7 @@ const jsonLd = {
 
 const SumpPumpPage = () => {
   return (
-    <div className="container mt-5">
+    <>
        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -155,7 +155,7 @@ const SumpPumpPage = () => {
           </article>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

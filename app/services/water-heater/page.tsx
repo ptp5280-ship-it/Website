@@ -81,7 +81,7 @@ const jsonLd = {
 
 const WaterHeaterPage = () => {
   return (
-    <div className="container mt-5">
+    <>
        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -158,7 +158,7 @@ const WaterHeaterPage = () => {
           </article>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

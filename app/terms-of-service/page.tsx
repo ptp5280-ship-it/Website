@@ -2,7 +2,7 @@ import React from 'react';
 
 const TermsOfService = () => {
   return (
-    <div className="container mt-5">
+    <>
       <h1>Terms of Service</h1>
       <p>
         <strong>Last Updated: {new Date().toLocaleDateString()}</strong>
@@ -121,7 +121,7 @@ const TermsOfService = () => {
         <li>By mail: 4210 S Galapago St, Englewood, CO 80110</li>
         <li>By phone: 720-298-1900</li>
       </ul>
-    </div>
+    </>
   );
 };
 
