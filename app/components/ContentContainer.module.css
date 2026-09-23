@@ -1,0 +1,39 @@
+/* Defines a centered container with a max-width and horizontal padding */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Sets top and bottom margin */
+.my5 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Media queries to adjust max-width for different screen sizes */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}

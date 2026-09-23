@@ -3,6 +3,7 @@ import './globals.css';
 import { NavigationBar } from './components/NavigationBar';
 import { Footer } from './components/Footer';
 import { Lilita_One, Roboto_Flex } from 'next/font/google';
+import ConditionalContainer from './components/ConditionalContainer';
 
 const lilitaOne = Lilita_One({
   weight: '400',
@@ -22,8 +23,8 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`${robotoFlex.variable} ${lilitaOne.variable}`}>
         <NavigationBar />
-        <main className='container mt-5'>
-          {children}
+        <main>
+          <ConditionalContainer>{children}</ConditionalContainer>
         </main>
         <Footer />
       </body>

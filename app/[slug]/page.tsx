@@ -6,6 +6,7 @@ import Markdown from '../components/Markdown';
 import { Metadata } from 'next';
 import FAQ from '../components/FAQ';
 import styles from '../styles/Markdown.module.css';
+import ContentContainer from '../components/ContentContainer';
 
 export const revalidate = 60;
 
@@ -175,7 +176,7 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
   };
 
   return (
-    <>
+    <ContentContainer>
       <div className="row">
         <div className="col-md-8 offset-md-2">
           <article>
@@ -214,7 +215,7 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
           </article>
         </div>
       </div>
-    </>
+    </ContentContainer>
   );
 };
 

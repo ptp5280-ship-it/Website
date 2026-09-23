@@ -1,8 +1,9 @@
 import React from 'react';
+import ContentContainer from '../components/ContentContainer';
 
 const CopyrightNotice = () => {
   return (
-    <>
+    <ContentContainer>
       <h1>Copyright Notice</h1>
       <p>
         Copyright © {new Date().getFullYear()} Peach Tree Plumbing. All rights
@@ -15,7 +16,7 @@ const CopyrightNotice = () => {
         modify, or create derivative works of any of the content without our
         prior written permission.
       </p>
-    </>
+    </ContentContainer>
   );
 };
 

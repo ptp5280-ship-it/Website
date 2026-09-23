@@ -104,28 +104,25 @@ const BidetInstallationPage = () => {
               <p>Choosing the right bidet depends on your bathroom layout, existing fixtures, and desired features. Here is a professional assessment of the three primary types of bidets we install:</p>
               
               <h4>1. Bidet Seats (Electronic and Non-Electronic)</h4>
-              <p>This is the most common and versatile option, replacing your existing toilet seat with a technologically advanced unit.
-                <ul>
-                  <li><strong>Functionality:</strong> Electronic models offer a suite of features, including instant or tank-heated warm water, adjustable water pressure and temperature, a heated seat, a warm air dryer, and self-cleaning nozzles. Non-electronic models are more basic, using your existing cold water line to provide a simple, effective cleanse.</li>
-                  <li><strong>Installation Requirements:</strong> A compatible toilet bowl shape is the first prerequisite. Critically, electronic models require a GFCI-protected electrical outlet near the toilet to operate safely. Attempting to use an extension cord is a serious safety hazard and a code violation. Part of our professional service is ensuring this electrical requirement is met safely and correctly.</li>
-                </ul>
-              </p>
+              <p>This is the most common and versatile option, replacing your existing toilet seat with a technologically advanced unit.</p>
+              <ul>
+                <li><strong>Functionality:</strong> Electronic models offer a suite of features, including instant or tank-heated warm water, adjustable water pressure and temperature, a heated seat, a warm air dryer, and self-cleaning nozzles. Non-electronic models are more basic, using your existing cold water line to provide a simple, effective cleanse.</li>
+                <li><strong>Installation Requirements:</strong> A compatible toilet bowl shape is the first prerequisite. Critically, electronic models require a GFCI-protected electrical outlet near the toilet to operate safely. Attempting to use an extension cord is a serious safety hazard and a code violation. Part of our professional service is ensuring this electrical requirement is met safely and correctly.</li>
+              </ul>
 
               <h4>2. Standalone Bidet Fixtures</h4>
-              <p>A standalone bidet is a separate, dedicated fixture installed next to your toilet.
-                <ul>
-                  <li><strong>Functionality:</strong> This is the classic, traditional bidet. It operates much like a low-mounted sink, with hot and cold water taps for temperature control.</li>
-                  <li><strong>Installation Requirements:</strong> This is the most complex installation. It requires dedicated hot and cold water supply lines and a new drain connection, making it a project best suited for a full bathroom remodel or new construction. It demands significant plumbing knowledge to ensure proper drainage and prevent cross-contamination.</li>
-                </ul>
-              </p>
+              <p>A standalone bidet is a separate, dedicated fixture installed next to your toilet.</p>
+              <ul>
+                <li><strong>Functionality:</strong> This is the classic, traditional bidet. It operates much like a low-mounted sink, with hot and cold water taps for temperature control.</li>
+                <li><strong>Installation Requirements:</strong> This is the most complex installation. It requires dedicated hot and cold water supply lines and a new drain connection, making it a project best suited for a full bathroom remodel or new construction. It demands significant plumbing knowledge to ensure proper drainage and prevent cross-contamination.</li>
+              </ul>
 
               <h4>3. Handheld Bidet Sprayers (Shattafs)</h4>
-              <p>This device consists of a spray head with a trigger on a flexible hose, connected to the toilet&apos;s water supply.
-                <ul>
-                  <li><strong>Functionality:</strong> It offers a manually directed spray for cleansing. It is a simple and cost-effective bidet solution.</li>
-                  <li><strong>Installation Requirements:</strong> While seemingly simple, professional installation is crucial. The shut-off valve for these units MUST be closed after every use to prevent the hose from remaining pressurized, which can lead to leaks or catastrophic bursting. We ensure the connections are secure and educate clients on this critical operational step to prevent water damage.</li>
-                </ul>
-              </p>
+              <p>This device consists of a spray head with a trigger on a flexible hose, connected to the toilet&apos;s water supply.</p>
+              <ul>
+                <li><strong>Functionality:</strong> It offers a manually directed spray for cleansing. It is a simple and cost-effective bidet solution.</li>
+                <li><strong>Installation Requirements:</strong> While seemingly simple, professional installation is crucial. The shut-off valve for these units MUST be closed after every use to prevent the hose from remaining pressurized, which can lead to leaks or catastrophic bursting. We ensure the connections are secure and educate clients on this critical operational step to prevent water damage.</li>
+              </ul>
 
               <h2 className="fw-bold mt-5 mb-3">Why Professional Installation is Non-Negotiable</h2>
               <p>An improper bidet installation is a significant liability. As licensed plumbers, our process mitigates risks that the average DIY installer may not even be aware of.</p>
