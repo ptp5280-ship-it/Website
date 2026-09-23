@@ -2,20 +2,21 @@ import React from 'react';
 import { Metadata } from 'next';
 import styles from '../../styles/Markdown.module.css';
 import FAQ from '../../components/FAQ';
+import CallToAction from '../../components/CallToAction';
 
 export const metadata: Metadata = {
-  title: 'Toilet Repair and Installation Services in Denver, CO',
-  description: 'Leaky or clogged toilet? We offer expert toilet repair and new toilet installation services in Denver. We handle running toilets, poor flushing, and more.',
-  keywords: ['toilet repair Denver', 'clogged toilet', 'running toilet fix', 'new toilet installation', 'leaky toilet repair'],
+  title: 'Expert Toilet Repair & Installation in Denver, CO | Peach Tree Plumbing',
+  description: 'Dealing with a clogged, running, or leaky toilet in Denver? Peach Tree Plumbing offers fast, reliable toilet repair and installation services. Call us today!',
+  keywords: ['toilet repair Denver', 'clogged toilet Denver', 'running toilet fix', 'leaky toilet repair', 'new toilet installation Denver', 'toilet installation', 'plumber for toilet repair', 'emergency toilet repair'],
   openGraph: {
-    title: 'Toilet Repair and Installation Services in Denver, CO',
-    description: 'Leaky or clogged toilet? We offer expert toilet repair and new toilet installation services in Denver. We handle running toilets, poor flushing, and more.',
+    title: 'Expert Toilet Repair & Installation in Denver, CO | Peach Tree Plumbing',
+    description: 'Dealing with a clogged, running, or leaky toilet in Denver? Peach Tree Plumbing offers fast, reliable toilet repair and installation services. Call us today!',
     url: 'https://www.peachtreeplumbing5280.com/services/toilet-repair',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Toilet Repair and Installation Services in Denver, CO',
-    description: 'Leaky or clogged toilet? We offer expert toilet repair and new toilet installation services in Denver. We handle running toilets, poor flushing, and more.',
+    title: 'Expert Toilet Repair & Installation in Denver, CO | Peach Tree Plumbing',
+    description: 'Dealing with a clogged, running, or leaky toilet in Denver? Peach Tree Plumbing offers fast, reliable toilet repair and installation services. Call us today!',
   },
   alternates: {
     canonical: 'https://www.peachtreeplumbing5280.com/services/toilet-repair',
@@ -25,11 +26,19 @@ export const metadata: Metadata = {
 const faqItems = [
   {
     question: "Why is my toilet constantly running?",
-    answer: "A running toilet is usually caused by a faulty flapper or fill valve inside the tank. This wastes a significant amount of water and should be repaired promptly. We can easily replace these inexpensive parts to solve the problem.",
+    answer: "A running toilet is most often caused by a faulty flapper that no longer seals properly or a malfunctioning fill valve. This constant water flow can waste over 200 gallons a day! Our plumbers can quickly diagnose the issue and replace the worn-out parts to stop the waste and save you money.",
   },
   {
-    question: "Can you install a new, more efficient toilet?",
-    answer: "Yes, we can help you select and install a new high-efficiency toilet that uses less water per flush, saving you money on your water bill and reducing your environmental impact. Modern toilets also offer improved flushing power.",
+    question: "What's involved in installing a new toilet?",
+    answer: "Our comprehensive toilet installation service includes carefully removing your old toilet, inspecting the flange and water supply line, professionally setting the new toilet with a high-quality wax ring, and ensuring it is perfectly level and functions flawlessly. We handle everything from start to finish.",
+  },
+  {
+    question: "Can I prevent toilet clogs?",
+    answer: "Yes! To prevent clogs, avoid flushing anything other than human waste and toilet paper. Be cautious with \"flushable\" wipes, as they are a common cause of clogs. Also, be mindful not to use excessive amounts of toilet paper.",
+  },
+  {
+    question: "How can I tell if my toilet has a silent leak?",
+    answer: "A great way to check for a silent leak in the tank is to add a few drops of food coloring to the toilet tank water. Wait about 15-20 minutes without flushing. If you see the colored water appear in the toilet bowl, you have a leak from the tank, likely from a worn-out flapper.",
   },
 ];
 
@@ -40,7 +49,7 @@ const jsonLd = {
       '@type': 'WebPage',
       '@id': 'https://www.peachtreeplumbing5280.com/services/toilet-repair',
       'url': 'https://www.peachtreeplumbing5280.com/services/toilet-repair',
-      'name': 'Toilet Repair and Installation Services in Denver, CO',
+      'name': 'Expert Toilet Repair & Installation in Denver, CO | Peach Tree Plumbing',
       'isPartOf': {
         '@id': 'https://www.peachtreeplumbing5280.com'
       },
@@ -98,20 +107,40 @@ const ToiletRepairPage = () => {
       <div className="row">
         <div className="col-md-8 offset-md-2">
           <article>
-            <h1 className="fw-bold mb-4 text-center">Toilet Repair and Installation</h1>
+            <h1 className="fw-bold mb-4 text-center">Expert Toilet Repair & Installation in Denver</h1>
             <div className="post-meta text-center mb-5">
-              <span>Solving Your Toughest Toilet Troubles</span>
+              <span>Your Go-To Solution for All Toilet Troubles</span>
             </div>
             <div className={styles.markdownContent}>
-              <p>A malfunctioning toilet can be a major inconvenience and a source of stress. Whether you&apos;re dealing with a stubborn clog, a constant running sound, a leak at the base, or you&apos;re ready to upgrade to a more efficient model, Peach Tree Plumbing has you covered. Our experienced plumbers can quickly diagnose the problem and provide a reliable, long-lasting solution.</p>
-              <h2 className="fw-bold mt-5 mb-3">Common Toilet Problems We Solve</h2>
-              <ul>
-                <li><strong>Clogged Toilets:</strong> We can clear even the most stubborn clogs without damaging your pipes or toilet.</li>
-                <li><strong>Running Toilets:</strong> A toilet that constantly runs can waste hundreds of gallons of water. We can fix the internal components to stop the waste.</li>
-                <li><strong>Leaky Toilets:</strong> Leaks around the base of the toilet can damage your flooring and subfloor. We can replace the wax ring and ensure a tight seal.</li>
-                <li><strong>New Toilet Installation:</strong> We can help you choose and install a new toilet that fits your needs and budget, including high-efficiency and comfort-height models.</li>
-              </ul>
-              <p>Don&apos;t let toilet troubles disrupt your life. Contact us for fast and professional toilet repair and installation services.</p>
+                <p>A malfunctioning toilet is more than just an inconvenience—it can disrupt your daily routine, waste significant amounts of water, and even lead to water damage. Whether you're dealing with a stubborn clog, a toilet that won't stop running, or you're considering an upgrade, Peach Tree Plumbing provides expert, reliable solutions in the Denver metro area.</p>
+                
+                <h2 className="fw-bold mt-5 mb-3">Comprehensive Toilet Repair Services</h2>
+                <p>Our experienced plumbers have seen it all. We arrive with fully stocked trucks, ready to diagnose and resolve your toilet issue efficiently. Our services include:</p>
+                <ul>
+                    <li><strong>Clogged Toilet Repair:</strong> Stubborn clogs can be caused by foreign objects, excessive paper, or deeper sewer line issues. We use professional tools to clear the obstruction safely without risking damage to your pipes or toilet bowl.</li>
+                    <li><strong>Running Toilet Fixes:</strong> A running toilet can waste hundreds of gallons of water per day, driving up your utility bills. This is often due to a faulty flapper or fill valve. We can quickly replace these components to restore proper function.</li>
+                    <li><strong>Leaky Toilet Repair:</strong> A leak at the base of your toilet can damage your flooring, subfloor, and even the ceiling below. We can identify the source of the leak, often a failed wax ring, and perform the necessary repairs to protect your home.</li>
+                    <li><strong>Weak Flush Correction:</strong> If your toilet has a weak flush or requires multiple flushes, it may be due to clogged rim jets or an incorrect water level in the tank. We can resolve these issues to restore full flushing power.</li>
+                </ul>
+
+                <h2 className="fw-bold mt-5 mb-3">Professional Toilet Installation & Upgrades</h2>
+                <p>Ready to upgrade your bathroom with a new, more efficient toilet? We can help you select and install the perfect model for your home. We specialize in:</p>
+                <ul>
+                    <li><strong>High-Efficiency Toilets:</strong> Lower your water consumption and environmental footprint with a modern, low-flow toilet that doesn't sacrifice performance.</li>
+                    <li><strong>Comfort Height Toilets:</strong> These models are taller than standard toilets, making them more accessible and comfortable for many users.</li>
+                    <li><strong>Dual-Flush Toilets:</strong> Gain control over your water usage with a dual-flush system, offering a partial flush for liquid waste and a full flush for solid waste.</li>
+                </ul>
+
+                <h2 className="fw-bold mt-5 mb-3">Why Choose Peach Tree Plumbing?</h2>
+                <p>When you call us for your toilet repair or installation needs, you can expect:</p>
+                <ul>
+                    <li><strong>Experienced & Licensed Plumbers:</strong> Our team is fully trained and insured.</li>
+                    <li><strong>Upfront & Honest Pricing:</strong> We provide clear, transparent pricing before any work begins.</li>
+                    <li><strong>Fast & Reliable Service:</strong> We prioritize your needs and work efficiently to get the job done right.</li>
+                    <li><strong>Satisfaction Guaranteed:</strong> We stand behind our workmanship with a commitment to quality.</li>
+                </ul>
+                
+                <CallToAction />
             </div>
 
             {faqItems.length > 0 && (

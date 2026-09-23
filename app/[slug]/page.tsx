@@ -25,7 +25,7 @@ export async function generateStaticParams() {
   }
 
   return posts.map((post) => ({
-    slug: post.slug,
+    slug: encodeURIComponent(post.slug),
   }));
 }
 
@@ -83,10 +83,11 @@ interface SupabaseFaqItem {
 }
 
 async function getBlogPost(slug: string) {
+  const decodedSlug = decodeURIComponent(slug);
   const { data, error } = await supabase
     .from('blog_posts')
     .select('*')
-    .eq('slug', slug)
+    .eq('slug', decodedSlug)
     .eq('is_published', true)
     .maybeSingle();
 
