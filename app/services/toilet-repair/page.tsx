@@ -107,14 +107,15 @@ const ToiletRepairPage = () => {
       <div className="row">
         <div className="col-md-8 offset-md-2">
           <article>
-            <h1 className="fw-bold mb-4 text-center">Expert Toilet Repair & Installation in Denver</h1>
+          <div className={styles.markdownContent}>
+            <h1>Expert Toilet Repair & Installation in Denver</h1>
             <div className="post-meta text-center mb-5">
               <span>Your Go-To Solution for All Toilet Troubles</span>
             </div>
-            <div className={styles.markdownContent}>
+            
                 <p>A malfunctioning toilet is more than just an inconvenience—it can disrupt your daily routine, waste significant amounts of water, and even lead to water damage. Whether you&apos;re dealing with a stubborn clog, a toilet that won&apos;t stop running, or you&apos;re considering an upgrade, Peach Tree Plumbing provides expert, reliable solutions in the Denver metro area.</p>
                 
-                <h2 className="fw-bold mt-5 mb-3">Comprehensive Toilet Repair Services</h2>
+                <h2>Comprehensive Toilet Repair Services</h2>
                 <p>Our experienced plumbers have seen it all. We arrive with fully stocked trucks, ready to diagnose and resolve your toilet issue efficiently. Our services include:</p>
                 <ul>
                     <li><strong>Clogged Toilet Repair:</strong> Stubborn clogs can be caused by foreign objects, excessive paper, or deeper sewer line issues. We use professional tools to clear the obstruction safely without risking damage to your pipes or toilet bowl.</li>
@@ -123,7 +124,7 @@ const ToiletRepairPage = () => {
                     <li><strong>Weak Flush Correction:</strong> If your toilet has a weak flush or requires multiple flushes, it may be due to clogged rim jets or an incorrect water level in the tank. We can resolve these issues to restore full flushing power.</li>
                 </ul>
 
-                <h2 className="fw-bold mt-5 mb-3">Professional Toilet Installation & Upgrades</h2>
+                <h2>Professional Toilet Installation & Upgrades</h2>
                 <p>Ready to upgrade your bathroom with a new, more efficient toilet? We can help you select and install the perfect model for your home. We specialize in:</p>
                 <ul>
                     <li><strong>High-Efficiency Toilets:</strong> Lower your water consumption and environmental footprint with a modern, low-flow toilet that doesn&apos;t sacrifice performance.</li>
@@ -131,7 +132,7 @@ const ToiletRepairPage = () => {
                     <li><strong>Dual-Flush Toilets:</strong> Gain control over your water usage with a dual-flush system, offering a partial flush for liquid waste and a full flush for solid waste.</li>
                 </ul>
 
-                <h2 className="fw-bold mt-5 mb-3">Why Choose Peach Tree Plumbing?</h2>
+                <h2>Why Choose Peach Tree Plumbing?</h2>
                 <p>When you call us for your toilet repair or installation needs, you can expect:</p>
                 <ul>
                     <li><strong>Experienced & Licensed Plumbers:</strong> Our team is fully trained and insured.</li>

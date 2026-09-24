@@ -89,15 +89,15 @@ const LeakDetectionPage = () => {
       <div className="row">
         <div className="col-md-8 offset-md-2">
           <article>
-            <h1 className="fw-bold mb-4 text-center">The Science of Leak Detection: A Master Plumber&apos;s Perspective</h1>
-            <div className="post-meta text-center mb-5">
-              <span>Precision Diagnostics for Protecting Your Denver Property</span>
-            </div>
             <div className={styles.markdownContent}>
+              <h1>The Science of Leak Detection: A Master Plumber&apos;s Perspective</h1>
+              <div className="post-meta text-center mb-5">
+                <span>Precision Diagnostics for Protecting Your Denver Property</span>
+              </div>
               <p>Of all the plumbing issues a homeowner in Denver can face, the hidden leak is one of the most insidious. It is a silent saboteur, operating behind walls, under floors, and within the very foundation of your home. The drip you can see is an annoyance; the one you can&apos;t see is a threat. As a master plumber with decades of field experience, I can attest that unaddressed leaks are a leading cause of catastrophic property damage, from structural decay and foundation failure to toxic mold remediation.</p>
               <p>Leak detection is not a guessing game. It is a highly specialized discipline that combines an intimate knowledge of plumbing systems with advanced diagnostic technology. This guide explains our professional process, detailing how we locate the precise source of a leak non-invasively, protecting your property from the destructive &quot;search-and-destroy&quot; methods of the past.</p>
 
-              <h2 className="fw-bold mt-5 mb-3">Recognizing the Telltale Signs of a Hidden Leak</h2>
+              <h2>Recognizing the Telltale Signs of a Hidden Leak</h2>
               <p>Your home will often give you subtle clues that a leak exists. Recognizing these signs early is the key to preventing major damage. Do not ignore them.</p>
               <ul>
                 <li><strong>An Unexplained Increase in Your Water Bill:</strong> This is often the first and most obvious red flag. If your water usage habits haven&apos;t changed but your bill has jumped significantly, you are paying for water that is being lost somewhere in your system.</li>
@@ -109,7 +109,7 @@ const LeakDetectionPage = () => {
               </ul>
               <p>If you observe any of these signs, the next step is a simple diagnostic test at your water meter before you call a professional.</p>
 
-              <h2 className="fw-bold mt-5 mb-3">The Professional Leak Detection Toolkit: Science Over Guesswork</h2>
+              <h2>The Professional Leak Detection Toolkit: Science Over Guesswork</h2>
               <p>Years ago, finding a leak meant making educated guesses and then cutting into walls or floors. It was destructive and expensive. Today, we employ a suite of sophisticated, non-invasive tools that allow us to pinpoint a leak with surgical precision.</p>
 
               <h4>1. Acoustic Listening Devices</h4>
@@ -124,10 +124,10 @@ const LeakDetectionPage = () => {
               <h4>4. Sewer and Drain Camera Inspection</h4>
               <p>Leaks are not limited to pressurized water supply lines. Sewer and drain lines can also crack and leak due to tree root intrusion, ground shifting (a common issue in Denver&apos;s expansive clay soils), or simple deterioration. For these non-pressurized lines, we use a high-resolution, fiber-optic camera mounted on a flexible rod. We push the camera through the pipe, allowing us to see the exact condition of the interior on a video monitor. We can identify cracks, breaks, root blockages, and separated joints with certainty.</p>
 
-              <h2 className="fw-bold mt-5 mb-3">The Critical Case of the Slab Leak</h2>
+              <h2>The Critical Case of the Slab Leak</h2>
               <p>A leak occurring in the pipes beneath your home&apos;s concrete foundation is known as a slab leak. This is one of the most dangerous and destructive types of plumbing failures. The constant flow of water can wash away the soil that supports the slab, leading to heaving, cracking, and severe structural instability. Repairing a slab leak is impossible without first locating it precisely. Our combination of acoustic and tracer gas detection is the only professional, non-destructive way to find the exact point of failure before discussing repair options.</p>
 
-              <h2 className="fw-bold mt-5 mb-3">From Detection to Repair: The Complete Solution</h2>
+              <h2>From Detection to Repair: The Complete Solution</h2>
               <p>Finding the leak is only half the battle. Once we have pinpointed the location, we can provide a complete and professional repair solution.</p>
               <ul>
                 <li><strong>Targeted Access:</strong> Because we know exactly where the leak is, we only need to make a small, targeted opening to access the damaged pipe. For a slab leak, this might mean carefully cutting a small section of the concrete. For a leak in a wall, it means cutting a small, easily repairable section of drywall.</li>
@@ -135,7 +135,7 @@ const LeakDetectionPage = () => {
                 <li><strong>Restoration:</strong> We perform the plumbing repair to the highest professional standards, ensuring a durable, long-lasting solution.</li>
               </ul>
 
-              <h2 className="fw-bold mt-5 mb-3">Do Not Delay: Your Trusted Denver Leak Detection Specialists</h2>
+              <h2>Do Not Delay: Your Trusted Denver Leak Detection Specialists</h2>
               <p>A hidden leak is a problem that only gets worse—and more expensive—with time. The cost of a professional leak detection service is minuscule compared to the cost of extensive water damage remediation, mold removal, or structural repairs. If you suspect you have a leak, do not hesitate. Contact us for a professional, non-invasive diagnostic service. We have the technology and the decades of experience required to find and fix it right, protecting your most valuable investment: your home.</p>
             </div>
 

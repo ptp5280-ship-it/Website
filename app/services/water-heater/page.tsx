@@ -89,15 +89,15 @@ const WaterHeaterPage = () => {
       <div className="row">
         <div className="col-md-8 offset-md-2">
           <article>
-            <h1 className="fw-bold mb-4 text-center">A Master Plumber’s Guide to Water Heaters in Denver</h1>
+          <div className={styles.markdownContent}>
+            <h1>A Master Plumber&apos;s Guide to Water Heaters in Denver</h1>
             <div className="post-meta text-center mb-5">
               <span>Your Expert for Repair, Replacement, and Installation</span>
             </div>
-            <div className={styles.markdownContent}>
-              <p>Reliable hot water is not a luxury; it&apos;s a cornerstone of modern life. From your morning shower to washing your dishes, you depend on your water heater every single day. As a master plumber serving the Denver area for decades, I’ve seen that this hard-working appliance is often ignored until the moment it fails—usually at the most inconvenient time. A cold shower is a rude awakening, but a leaking tank can be a genuine disaster.</p>
-              <p>This guide provides an authoritative overview of water heater technology, common problems, and our professional services. We’ll cover repair versus replacement, the pros and cons of tank vs. tankless systems, and the critical importance of proper installation and maintenance, especially given Denver’s challenging hard water conditions.</p>
+              <p>Reliable hot water is not a luxury; it&apos;s a cornerstone of modern life. From your morning shower to washing your dishes, you depend on your water heater every single day. As a master plumber serving the Denver area for decades, I&apos;ve seen that this hard-working appliance is often ignored until the moment it fails—usually at the most inconvenient time. A cold shower is a rude awakening, but a leaking tank can be a genuine disaster.</p>
+              <p>This guide provides an authoritative overview of water heater technology, common problems, and our professional services. We&apos;ll cover repair versus replacement, the pros and cons of tank vs. tankless systems, and the critical importance of proper installation and maintenance, especially given Denver&apos;s challenging hard water conditions.</p>
 
-              <h2 className="fw-bold mt-5 mb-3">Common Water Heater Problems and When to Call a Pro</h2>
+              <h2>Common Water Heater Problems and When to Call a Pro</h2>
               <p>Recognizing the warning signs of a failing water heater can help you avoid an emergency replacement.</p>
               <ul>
                 <li><strong>No Hot Water:</strong> This is the most obvious sign. For a gas heater, it could be a simple pilot light issue or a faulty thermocouple. For an electric heater, it might be a failed heating element or thermostat.</li>
@@ -107,7 +107,7 @@ const WaterHeaterPage = () => {
                 <li><strong>Discolored or Smelly Water:</strong> Rusty water means the inside of your tank is corroding. A rotten egg smell is typically caused by a reaction with a depleted anode rod and requires professional service.</li>
               </ul>
 
-              <h2 className="fw-bold mt-5 mb-3">Professional Water Heater Installation: More Than Just Connecting Pipes</h2>
+              <h2>Professional Water Heater Installation: More Than Just Connecting Pipes</h2>
               <p>Proper installation is absolutely critical for the safety, efficiency, and longevity of your water heater. Our professional installation is a comprehensive process:</p>
               <ol>
                 <li><strong>Proper Sizing:</strong> We assess your family&apos;s hot water needs to recommend the right size tank. A tank that is too small will constantly run out of hot water, while one that is too large will waste energy.</li>
@@ -118,7 +118,7 @@ const WaterHeaterPage = () => {
               </ol>
 
               <h2 className="fw-bold mt-5 mb-3">The Great Debate: Traditional Tank vs. Tankless Water Heaters</h2>
-              <p>This is a common question from Denver homeowners. Here’s a professional breakdown:</p>
+              <p>This is a common question from Denver homeowners. Here&apos;s a professional breakdown:</p>
 
               <h4>Traditional Storage Tank Water Heaters</h4>
               <p>These are the familiar large tanks. They heat and store 30-50+ gallons of water, keeping it ready for use. We proudly install high-quality brands like Bradford White, known for their reliability.</p>
@@ -131,11 +131,11 @@ const WaterHeaterPage = () => {
               <p>These units heat water instantaneously as it flows through the device. They do not store any hot water.</p>
               <ul>
                 <li><strong>Pros:</strong> Endless hot water (will not run out), significantly higher energy efficiency (can save 20-30% on gas bills), much longer lifespan (20+ years), very small and space-saving.</li>
-                <li><strong>Cons:</strong> Higher upfront installation cost (may require larger gas lines or dedicated electrical circuits), requires annual descaling maintenance to handle Denver’s hard water.</li>
+                <li><strong>Cons:</strong> Higher upfront installation cost (may require larger gas lines or dedicated electrical circuits), requires annual descaling maintenance to handle Denver&apos;s hard water.</li>
               </ul>
               <p><strong>The Verdict:</strong> While the initial investment is higher, we find that a tankless water heater is a superior long-term investment for many Denver homeowners due to the significant energy savings and much longer operational life.</p>
 
-              <h2 className="fw-bold mt-5 mb-3">The Importance of Maintenance in Denver’s Hard Water Environment</h2>
+              <h2>The Importance of Maintenance in Denver&apos;s Hard Water Environment</h2>
               <p>Denver has very hard water, which is rich in minerals like calcium and magnesium. This is the arch-enemy of your water heater.</p>
               <ul>
                 <li><strong>For Tank Heaters:</strong> Annual flushing is essential to remove the sediment that builds up. This improves efficiency and prevents the corrosion that leads to tank failure.</li>
@@ -143,7 +143,7 @@ const WaterHeaterPage = () => {
               </ul>
               <p>Proper maintenance is the key to maximizing the lifespan and efficiency of whichever type of water heater you choose.</p>
 
-              <h2 className="fw-bold mt-5 mb-3">Your Trusted Partner for Hot Water in Denver</h2>
+              <h2>Your Trusted Partner for Hot Water in Denver</h2>
               <p>Whether you need an emergency repair for a leaking tank, are looking to upgrade to an energy-efficient tankless model, or want to establish a maintenance plan to protect your investment, we are here to help. Our team of certified, experienced plumbers provides honest advice, transparent pricing, and the highest quality workmanship. Contact us today to ensure your home has the safe, reliable hot water it needs.</p>
             </div>
 

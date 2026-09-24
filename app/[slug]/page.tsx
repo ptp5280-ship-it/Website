@@ -184,6 +184,15 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
+            <Image
+              src={post.image || 'https://via.placeholder.com/800x400'}
+              alt={post.title}
+              width={800}
+              height={400}
+              priority={true}
+              className={`${styles.centeredImage} img-fluid rounded mb-5 shadow`}
+            />
+            <Markdown content={post.content} />
             <div className="post-meta text-center mb-5">
               <span>
                 Posted on {new Date(post.created_at).toLocaleDateString()}
@@ -193,16 +202,6 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
                 <span>{post.read_time_minutes} min read</span>
               )}
             </div>
-            <Image
-              src={post.image || 'https://via.placeholder.com/800x400'}
-              alt={post.title}
-              width={800}
-              height={400}
-              priority={true}
-              className={`${styles.centeredImage} img-fluid rounded mb-5 shadow`}
-            />
-            <h1 className="fw-bold mb-4 text-center">{post.title}</h1>
-            <Markdown content={post.content} />
 
             {faqItems.length > 0 && (
               <div className="mt-5">

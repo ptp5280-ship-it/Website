@@ -93,15 +93,15 @@ const CommercialPlumbingPage = () => {
       <div className="row">
         <div className="col-md-8 offset-md-2">
           <article>
-            <h1 className="fw-bold mb-4 text-center">The Professional Standard in Denver Commercial Plumbing</h1>
-            <div className="post-meta text-center mb-5">
-              <span>Protecting Your Investment, Ensuring Your Operation</span>
-            </div>
             <div className={styles.markdownContent}>
+              <h1>The Professional Standard in Denver Commercial Plumbing</h1>
+              <div className="post-meta text-center mb-5">
+                <span>Protecting Your Investment, Ensuring Your Operation</span>
+              </div>
                 <p>A plumbing system in a commercial setting is not merely a convenience; it is a critical component of your business&apos;s infrastructure. A failure in this system doesn&apos;t just cause an inconvenience—it halts operations, violates health codes, deters customers, and directly impacts your revenue. As master plumbers with decades of experience serving the Denver business community, we understand that commercial plumbing is a discipline of its own, demanding a level of expertise, foresight, and robustness far beyond that of residential work.</p>
                 <p>This guide provides a professional overview of the essential services and considerations for any Denver business owner or property manager. It is designed to clarify the complexities and highlight the non-negotiable value of partnering with a true commercial plumbing specialist.</p>
 
-                <h2 className="fw-bold mb-3">The Critical Distinction: Commercial vs. Residential Systems</h2>
+                <h2>The Critical Distinction: Commercial vs. Residential Systems</h2>
                 <p>Understanding why you need a commercial specialist begins with appreciating the fundamental differences in the systems we service. These are not interchangeable disciplines.</p>
                 <ul>
                     <li><strong>Material and Size Specifications:</strong> Commercial code dictates larger pipe diameters (typically 3-inch and 4-inch for drain lines) to handle high-volume usage. We work with materials like cast iron, ductile iron, and heavy-duty PVC specified for their durability under constant, demanding conditions, a stark contrast to the materials typically used in a home.</li>
@@ -110,7 +110,7 @@ const CommercialPlumbingPage = () => {
                     <li><strong>Regulatory and Code Compliance:</strong> This is the most significant differentiator. Commercial plumbing is governed by a thicket of stringent international, state, and local codes, including the International Plumbing Code (IPC) and specific Denver amendments. These regulations cover everything from public health and safety (like mandatory backflow prevention) to ADA compliance. A non-compliant system is a liability that can lead to fines and forced closures.</li>
                 </ul>
 
-                <h2 className="fw-bold mb-3">Core Commercial Plumbing Services for Denver Businesses</h2>
+                <h2>Core Commercial Plumbing Services for Denver Businesses</h2>
                 <p>Our services are built around the central goal of keeping your business operational, compliant, and profitable. We are not just repairmen; we are partners in your facility&apos;s success.</p>
 
                 <h4>Emergency Services: Minimizing Downtime is Our Priority</h4>
@@ -135,7 +135,7 @@ const CommercialPlumbingPage = () => {
                 <h4>Tenant Improvements and New Construction Plumbing</h4>
                 <p>We work seamlessly with general contractors, architects, and business owners to execute the plumbing scope for tenant build-outs and new construction projects. From initial blueprint review and layout planning to the final fixture installation, our expertise ensures the project is done right, on schedule, and up to code. Whether you are opening a new coffee shop in the Highlands or renovating an entire floor of a downtown office building, we have the experience to manage the complexities of commercial plumbing construction, including core drilling, overhead pipe installation, and coordinating with other trades.</p>
 
-                <h2 className="fw-bold mb-3">The Value of a Proactive Plumbing Maintenance Partnership</h2>
+                <h2>The Value of a Proactive Plumbing Maintenance Partnership</h2>
                 <p>The most effective way to handle a plumbing emergency is to prevent it from ever happening. We work with business owners and property managers to create customized preventative maintenance plans. These plans are proactive, cost-effective, and tailored to your facility. A typical plan might include:</p>
                 <ul>
                     <li><strong>Quarterly:</strong> Hydro-jetting of kitchen drain lines and grease traps.</li>
@@ -144,7 +144,7 @@ const CommercialPlumbingPage = () => {
                 </ul>
                 <p>This proactive approach significantly reduces the risk of emergency shutdowns, extends the life of your equipment, and allows for predictable budgeting of maintenance costs.</p>
 
-                <h2 className="fw-bold mb-3">Your Denver Commercial Plumbing Authority</h2>
+                <h2>Your Denver Commercial Plumbing Authority</h2>
                 <p>Choosing a plumber for your business is a significant decision. Your choice can directly affect your bottom line, your reputation, and your legal standing. With our decades of dedicated commercial experience in the Denver metro area, we bring an unparalleled level of professionalism to every job. We are fully licensed, insured, and committed to a standard of excellence that your business deserves. Contact us to discuss your specific needs or to schedule a professional consultation.</p>
             </div>
 

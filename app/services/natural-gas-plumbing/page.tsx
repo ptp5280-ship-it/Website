@@ -89,15 +89,15 @@ const NaturalGasPlumbingPage = () => {
       <div className="row">
         <div className="col-md-8 offset-md-2">
           <article>
-            <h1 className="fw-bold mb-4 text-center">The Professional Standard for Natural Gas Plumbing in Denver</h1>
-            <div className="post-meta text-center mb-5">
-              <span>Safety, Certification, and Precision Engineering</span>
-            </div>
             <div className={styles.markdownContent}>
+              <h1>The Professional Standard for Natural Gas Plumbing in Denver</h1>
+              <div className="post-meta text-center mb-5">
+                <span>Safety, Certification, and Precision Engineering</span>
+              </div>
               <p>Natural gas is an efficient, reliable, and powerful energy source that fuels many of our homes and businesses in Denver. However, it must be treated with the utmost respect. Unlike water plumbing, where a mistake leads to a flood, a mistake in gas plumbing can have catastrophic consequences. This is not a field for amateurs or handymen. It is a highly regulated, specialized trade that requires certified technicians, a deep understanding of physics, and an unwavering commitment to safety and code compliance.</p>
               <p>As master plumbers with specific state and local certifications for gas line work, we provide this essential service with the precision and professionalism it demands. This guide outlines our core services and explains the critical safety principles that govern every gas-related project we undertake.</p>
 
-              <h2 className="fw-bold mt-5 mb-3">The Unmistakable Signs of a Gas Leak: A Call to Immediate Action</h2>
+              <h2>The Unmistakable Signs of a Gas Leak: A Call to Immediate Action</h2>
               <p>Natural gas is odorless, so utility companies add a chemical called mercaptan to give it a distinct &quot;rotten egg&quot; smell. Recognizing this smell is a critical life-safety skill.</p>
               <p><strong>If you smell gas, follow these steps without deviation:</strong></p>
               <ol>
@@ -107,7 +107,7 @@ const NaturalGasPlumbingPage = () => {
                 <li><strong>THEN, CALL US.</strong> Once the gas is off and the immediate danger has passed, we are your certified professionals for locating and repairing the leak.</li>
               </ol>
 
-              <h2 className="fw-bold mt-5 mb-3">Core Natural Gas Plumbing Services</h2>
+              <h2>Core Natural Gas Plumbing Services</h2>
               <p>Our work is founded on a principle of absolute safety and strict adherence to the International Fuel Gas Code (IFGC) and local Denver amendments.</p>
 
               <h4>Gas Leak Detection and Repair</h4>
@@ -130,10 +130,10 @@ const NaturalGasPlumbingPage = () => {
                 <li><strong>Combustion Air and Venting:</strong> For appliances like furnaces and water heaters, we ensure there is adequate combustion air and that the venting system is correctly installed to safely carry exhaust gases (including carbon monoxide) out of your home.</li>
               </ul>
 
-              <h2 className="fw-bold mt-5 mb-3">CSST Bonding and Grounding: A Critical Safety Note for Denver Homes</h2>
+              <h2>CSST Bonding and Grounding: A Critical Safety Note for Denver Homes</h2>
               <p>Many modern homes in Denver use CSST for its flexibility. However, it is a building code requirement that these systems be bonded to the home&apos;s electrical grounding system. An electrical surge from a lightning strike can potentially arc to the CSST, creating a perforation and a subsequent gas leak. As part of our professional standard of care, we are qualified to assess and perform this critical bonding to ensure your family&apos;s safety.</p>
 
-              <h2 className="fw-bold mt-5 mb-3">Why You Must Hire a Certified Gas Plumber</h2>
+              <h2>Why You Must Hire a Certified Gas Plumber</h2>
               <p>The risks associated with improper gas plumbing are too severe to ignore. A licensed and certified gas plumber from our team brings:</p>
               <ul>
                 <li><strong>Specialized Training:</strong> We are trained and tested on the specific properties of natural gas and the stringent codes that govern its use.</li>
@@ -142,7 +142,7 @@ const NaturalGasPlumbingPage = () => {
                 <li><strong>Permitting and Inspection Knowledge:</strong> We know when a permit is required for gas work in Denver, and we ensure all our installations are performed to a standard that will pass a third-party inspection.</li>
               </ul>
 
-              <h2 className="fw-bold mt-5 mb-3">Your Trusted Partner for Gas System Safety</h2>
+              <h2>Your Trusted Partner for Gas System Safety</h2>
               <p>Your home&apos;s gas piping is an essential system that provides comfort and convenience. Entrust its installation, repair, and maintenance only to certified professionals with a proven track record of safety and excellence. We have been serving the Denver community for decades, and our commitment to safety is absolute. Contact us for a consultation or for any gas plumbing needs.</p>
             </div>
 

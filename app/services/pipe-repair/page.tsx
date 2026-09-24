@@ -89,14 +89,14 @@ const PipeRepairPage = () => {
       <div className="row">
         <div className="col-md-8 offset-md-2">
           <article>
-            <h1 className="fw-bold mb-4 text-center">An Expert Guide to Pipe Repair and Repiping in Denver</h1>
-            <div className="post-meta text-center mb-5">
-              <span>From Targeted Repairs to Whole-Home Solutions</span>
-            </div>
             <div className={styles.markdownContent}>
-              <p>The circulatory system of your home is its plumbing. Hidden behind walls and beneath floors, this complex network of pipes delivers fresh water and carries away waste, day in and day out. When this system is compromised, it affects every aspect of your daily life. As master plumbers who have been servicing Denver homes for decades, we have seen firsthand how pipe issues can escalate from a minor nuisance to a full-blown catastrophe. This guide provides an authoritative look at pipe repair versus replacement, helping you understand when a simple fix is enough and when it’s time to consider a vital upgrade to your home’s infrastructure.</p>
+              <h1>An Expert Guide to Pipe Repair and Repiping in Denver</h1>
+              <div className="post-meta text-center mb-5">
+                <span>From Targeted Repairs to Whole-Home Solutions</span>
+              </div>
+              <p>The circulatory system of your home is its plumbing. Hidden behind walls and beneath floors, this complex network of pipes delivers fresh water and carries away waste, day in and day out. When this system is compromised, it affects every aspect of your daily life. As master plumbers who have been servicing Denver homes for decades, we have seen firsthand how pipe issues can escalate from a minor nuisance to a full-blown catastrophe. This guide provides an authoritative look at pipe repair versus replacement, helping you understand when a simple fix is enough and when it&apos;s time to consider a vital upgrade to your home&apos;s infrastructure.</p>
 
-              <h2 className="fw-bold mt-5 mb-3">The Critical Decision: Repair or Repipe?</h2>
+              <h2>The Critical Decision: Repair or Repipe?</h2>
               <p>This is the fundamental question property owners face. The answer depends on the age of your system, the material of your pipes, and the nature of the problem.</p>
               
               <h4>When a Targeted Pipe Repair is the Right Call</h4>
@@ -109,15 +109,15 @@ const PipeRepairPage = () => {
               <p>In these cases, we can professionally cut out the damaged section and replace it, ensuring a durable, long-lasting repair that integrates seamlessly with the existing system. This is a cost-effective solution for a specific, identifiable problem.</p>
 
               <h4>When a Whole-Home Repipe is the Necessary Investment</h4>
-              <p>A repipe is a comprehensive solution for a systemic problem. It involves abandoning the old, failing pipe system and installing a completely new one. This is not a matter of convenience; it is a crucial upgrade to protect your home’s value and safety. You should strongly consider a repipe if you encounter the following:</p>
+              <p>A repipe is a comprehensive solution for a systemic problem. It involves abandoning the old, failing pipe system and installing a completely new one. This is not a matter of convenience; it is a crucial upgrade to protect your home&apos;s value and safety. You should strongly consider a repipe if you encounter the following:</p>
               <ul>
-                <li><strong>Multiple Leaks in a Short Time:</strong> If you’re fixing one leak, then another pops up a few months later, it’s a clear sign your entire system is failing. Chasing individual leaks becomes a costly and ultimately futile exercise.</li>
+                <li><strong>Multiple Leaks in a Short Time:</strong> If you&apos;re fixing one leak, then another pops up a few months later, it&apos;s a clear sign your entire system is failing. Chasing individual leaks becomes a costly and ultimately futile exercise.</li>
                 <li><strong>Low Water Pressure Throughout the Home:</strong> As pipes age, particularly galvanized steel, they corrode from the inside. This buildup of rust and scale physically chokes off the water flow, leading to frustratingly low pressure at all fixtures.</li>
                 <li><strong>Discolored or Foul-Tasting Water:</strong> Are you seeing brown or reddish water when you first turn on the tap? That is rust from the inside of your pipes breaking off into your water supply or the anode in your water heater is old and needs replaced. This is a direct indicator of advanced corrosion.</li>
                 <li><strong>Your Home Has Galvanized or Polybutylene Pipes:</strong> These materials are ticking time bombs, and their failure is a matter of when, not if.</li>
               </ul>
 
-              <h2 className="fw-bold mt-5 mb-3">Problematic Pipe Materials Common in Denver Homes</h2>
+              <h2>Problematic Pipe Materials Common in Denver Homes</h2>
               <p>Much of our repiping work in the Denver area involves replacing outdated and failed piping materials.</p>
 
               <h4>Galvanized Steel (Pre-1970s Homes)</h4>
@@ -126,7 +126,7 @@ const PipeRepairPage = () => {
               <h4>Polybutylene (PB) (1978-1995)</h4>
               <p>Known as “the class-action lawsuit pipe,” polybutylene is a gray plastic pipe that was hailed as a cheap and easy alternative to copper. Unfortunately, common oxidants in municipal water supplies (like chlorine) attack the plastic, making it brittle. PB pipes are notorious for failing suddenly and without warning, causing catastrophic flooding. If you have gray plastic pipes in your home, you have a polybutylene system, and it needs to be replaced immediately.</p>
 
-              <h2 className="fw-bold mt-5 mb-3">Modern Piping Solutions: PEX vs. Copper</h2>
+              <h2>Modern Piping Solutions: PEX vs. Copper</h2>
               <p>When we repipe a home, we use modern, reliable materials. The two primary choices are Copper and PEX.</p>
 
               <h4>Copper</h4>
@@ -142,7 +142,7 @@ const PipeRepairPage = () => {
               </ul>
               <p>For the vast majority of repiping projects in Denver, we recommend and use PEX for its superior combination of reliability, durability, and installation efficiency.</p>
 
-              <h2 className="fw-bold mt-5 mb-3">The Professional Repiping Process</h2>
+              <h2>The Professional Repiping Process</h2>
               <p>A whole-home repipe is an invasive project, but our professional process is designed to minimize the impact on your life.</p>
               <ol>
                 <li><strong>Assessment and Planning:</strong> We conduct a thorough inspection of your home and create a detailed plan to run the new pipes in the most efficient and least-disruptive way possible.</li>
@@ -153,7 +153,7 @@ const PipeRepairPage = () => {
                 <li><strong>Inspection and Restoration:</strong> After the work is complete and inspected, the drywall can be repaired and painted, leaving no trace of the work behind besides a perfectly functioning plumbing system.</li>
               </ol>
 
-              <h2 className="fw-bold mt-5 mb-3">Invest in Your Home&apos;s Future</h2>
+              <h2>Invest in Your Home&apos;s Future</h2>
               <p>Your home&apos;s piping is a fundamental system that you rely on every day. Ignoring the signs of failure is a gamble against an inevitable and costly emergency. If you are experiencing any of the warning signs of a failing pipe system, contact us for a professional assessment. We will provide an honest, expert opinion on whether a simple repair will suffice or if a whole-home repipe is the right investment to protect your property for decades to come.</p>
             </div>
 

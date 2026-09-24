@@ -89,18 +89,18 @@ const BidetInstallationPage = () => {
       <div className="row">
         <div className="col-md-8 offset-md-2">
           <article>
-            <h1 className="fw-bold mb-4 text-center">Professional Bidet Installation in Denver</h1>
-            <div className="post-meta text-center mb-5">
-              <span>Your Expert Guide to a Modern Bathroom Upgrade</span>
-            </div>
             <div className={styles.markdownContent}>
+              <h1>Professional Bidet Installation in Denver</h1>
+              <div className="post-meta text-center mb-5">
+                <span>Your Expert Guide to a Modern Bathroom Upgrade</span>
+              </div>
               <p>The standard for bathroom hygiene is evolving. Homeowners in Denver and across the country are increasingly choosing bidets for their superior cleanliness, environmental benefits, and surprising level of comfort. As professional plumbers with decades of experience in the Denver area, we have managed countless bidet installations. This is not a simple DIY project; it is a plumbing and electrical upgrade that demands precision and adherence to code. This guide answers the most common questions we receive from clients, providing the authoritative information you need to make a confident decision.</p>
 
-              <h2 className="fw-bold mt-5 mb-3">Understanding the Superiority of Bidet Technology</h2>
+              <h2>Understanding the Superiority of Bidet Technology</h2>
               <p>The fundamental advantage of a bidet is its use of water for cleansing. Compared to the friction-based method of using toilet paper, water provides a more thorough and hygienic cleaning, reducing skin irritation and leaving you feeling genuinely fresh. For individuals with mobility issues or certain medical conditions, a bidet is not just a luxury—it is a significant quality-of-life improvement.</p>
               <p>Furthermore, from a practical and environmental standpoint, the reduction in toilet paper consumption is substantial. The production of toilet paper requires a significant amount of water and timber. A bidet system drastically cuts down on this household waste, leading to long-term cost savings and a smaller environmental footprint, a value many Coloradans hold in high regard.</p>
 
-              <h2 className="fw-bold mt-5 mb-3">A Professional Breakdown of Bidet Types</h2>
+              <h2>A Professional Breakdown of Bidet Types</h2>
               <p>Choosing the right bidet depends on your bathroom layout, existing fixtures, and desired features. Here is a professional assessment of the three primary types of bidets we install:</p>
               
               <h4>1. Bidet Seats (Electronic and Non-Electronic)</h4>
@@ -124,7 +124,7 @@ const BidetInstallationPage = () => {
                 <li><strong>Installation Requirements:</strong> While seemingly simple, professional installation is crucial. The shut-off valve for these units MUST be closed after every use to prevent the hose from remaining pressurized, which can lead to leaks or catastrophic bursting. We ensure the connections are secure and educate clients on this critical operational step to prevent water damage.</li>
               </ul>
 
-              <h2 className="fw-bold mt-5 mb-3">Why Professional Installation is Non-Negotiable</h2>
+              <h2>Why Professional Installation is Non-Negotiable</h2>
               <p>An improper bidet installation is a significant liability. As licensed plumbers, our process mitigates risks that the average DIY installer may not even be aware of.</p>
               <ul>
                 <li><strong>Water Connections:</strong> We use professional-grade T-valves and a supply lines. We correctly torque all fittings to create a watertight seal without cracking the porcelain of your toilet or the delicate plastic threads on the bidet unit itself. This prevents slow leaks that can cause rot and mold in your subfloor.</li>
@@ -133,7 +133,7 @@ const BidetInstallationPage = () => {
                 <li><strong>Addressing Hard Water:</strong> Denver&apos;s notoriously hard water can clog bidet nozzles and build up on heating elements. We can recommend and install bidets with built-in filters or self-cleaning functions that are better suited for our local water conditions, prolonging the life of your investment.</li>
               </ul>
 
-              <h2 className="fw-bold mt-5 mb-3">Our Denver Bidet Installation Process</h2>
+              <h2>Our Denver Bidet Installation Process</h2>
               <p>When you contract our services, you are ensuring a seamless and secure installation. Our process includes:</p>
               <ol>
                 <li><strong>Consultation and Assessment:</strong> We examine your existing toilet and bathroom layout to confirm compatibility and discuss the best bidet options for your needs and budget.</li>

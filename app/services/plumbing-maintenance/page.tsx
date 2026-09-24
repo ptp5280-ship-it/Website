@@ -92,15 +92,15 @@ const PlumbingMaintenancePage = () => {
       <div className="row">
         <div className="col-md-8 offset-md-2">
           <article>
-            <h1 className="fw-bold mb-4 text-center">The Professional’s Case for Plumbing Maintenance in Denver</h1>
+          <div className={styles.markdownContent}>
+            <h1>The Professional&apos;s Case for Plumbing Maintenance in Denver</h1>
             <div className="post-meta text-center mb-5">
               <span>Proactive Strategy vs. Reactive Crisis</span>
-            </div>
-            <div className={styles.markdownContent}>
+            </div>            
               <p>In my decades as a master plumber in Denver, I&apos;ve responded to countless late-night emergencies—flooded basements, burst pipes, failed water heaters. And in the vast majority of those cases, the crisis could have been entirely prevented. Plumbing systems, like any complex mechanical system, require periodic, professional attention. Reactive plumbing—waiting for something to break—is by far the most expensive and stressful way to manage your home. A proactive maintenance plan is not an expense; it is a strategic investment in your property&apos;s value, safety, and your own peace of mind.</p>
               <p>This guide outlines the core components of a professional plumbing maintenance plan and makes the clear, data-driven case for why it is an essential service for any responsible Denver homeowner.</p>
 
-              <h2 className="fw-bold mt-5 mb-3">The Core Tenets of Preventative Maintenance</h2>
+              <h2>The Core Tenets of Preventative Maintenance</h2>
               <p>A professional maintenance visit is not a cursory glance. It is a systematic, multi-point inspection and tune-up designed to identify and correct problems in their infancy, long before they escalate into emergencies.</p>
               
               <h4>1. The Water Heater: The Heart of Your System</h4>
@@ -130,7 +130,7 @@ const PlumbingMaintenancePage = () => {
                 <li><strong>Exterior Hose Bibs:</strong> We check for leaks and ensure they are properly winterized to prevent bursting in Denver&apos;s cold climate.</li>
               </ul>
 
-              <h2 className="fw-bold mt-5 mb-3">The Financial Argument for Maintenance</h2>
+              <h2>The Financial Argument for Maintenance</h2>
               <p>Consider these common scenarios:</p>
               <ul>
                 <li><strong>Scenario A (Reactive):</strong> Your 8-year-old water heater, never flushed, fails and leaks 40 gallons of rusty water into your finished basement. <strong>Cost: $2,000+ for a new water heater (emergency install) + $5,000-$10,000+ for water damage remediation.</strong></li>
@@ -138,7 +138,7 @@ const PlumbingMaintenancePage = () => {
               </ul>
               <p>The math is undeniable. Preventative maintenance isn&apos;t a cost; it&apos;s a massive savings. It transforms unpredictable, high-cost emergencies into manageable, scheduled expenses.</p>
 
-              <h2 className="fw-bold mt-5 mb-3">Your Partner in Homeownership</h2>
+              <h2>Your Partner in Homeownership</h2>
               <p>Our plumbing maintenance plan is more than just a checklist. It&apos;s a partnership. By allowing us to become intimately familiar with your home&apos;s plumbing system, we can provide better advice, faster diagnoses, and more effective long-term solutions. Plan members often receive benefits like priority scheduling and discounts on future work. It is the most logical, responsible, and cost-effective way to manage one of your home&apos;s most critical systems. Contact us to learn more about our Denver plumbing maintenance plans and start protecting your investment today.</p>
             </div>
 
