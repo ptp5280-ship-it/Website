@@ -146,14 +146,12 @@ const BidetInstallationPage = () => {
               <p>Investing in a bidet is an investment in your home, health, and comfort. Ensure it is done right. Contact us for a professional consultation and a firm quote for your Denver bidet installation project.</p>
             </div>
 
-            {faqItems.length > 0 && (
-              <div className="mt-5">
-                <h2 className="fw-bold mb-4 text-center">
-                  Frequently Asked Questions
-                </h2>
-                <FAQ faqs={faqItems} />
-              </div>
-            )}
+            <div className="mt-5">
+              <h2 className="fw-bold mb-4 text-center">
+                Frequently Asked Questions
+              </h2>
+              <FAQ faqs={faqItems} />
+            </div>
           </article>
         </div>
       </div>

@@ -103,13 +103,23 @@ async function getBlogPost(slug: string) {
 const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
   const post = await getBlogPost(params.slug);
 
-  const faqItems: FAQItem[] =
-    post.faq_json && Array.isArray(post.faq_json.mainEntity)
-      ? post.faq_json.mainEntity.map((item: SupabaseFaqItem) => ({
+  let faqItems: FAQItem[] = [];
+  if (post.faq_json) {
+    try {
+      const parsedFaq = typeof post.faq_json === 'string' 
+        ? JSON.parse(post.faq_json) 
+        : post.faq_json;
+
+      if (parsedFaq && Array.isArray(parsedFaq.mainEntity)) {
+        faqItems = parsedFaq.mainEntity.map((item: SupabaseFaqItem) => ({
           question: item.name,
           answer: item.acceptedAnswer.text,
-        }))
-      : [];
+        }));
+      }
+    } catch (error) {
+      console.error("Failed to parse faq_json:", error);
+    }
+  }
 
   const schemaGraph: Record<string, unknown>[] = [];
 
@@ -177,8 +187,8 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <ContentContainer>
-      <div className="row">
-        <div className="col-md-8 offset-md-2">
+      <div >
+        <div >
           <article>
             <script
               type="application/ld+json"
@@ -190,27 +200,26 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
               width={800}
               height={400}
               priority={true}
-              className={`${styles.centeredImage} img-fluid rounded mb-5 shadow`}
+              className={`${styles.centeredImage}`}
             />
             <Markdown content={post.content} />
-            <div className="post-meta text-center mb-5">
+            <div className="post-meta">
               <span>
                 Posted on {new Date(post.created_at).toLocaleDateString()}
               </span>
-              {post.read_time_minutes && <span className="mx-2">·</span>}
+              {post.read_time_minutes && <span >·</span>}
               {post.read_time_minutes && (
                 <span>{post.read_time_minutes} min read</span>
               )}
             </div>
+            
+            <div className="mt-5">
+              <h2 className="fw-bold mb-4 text-center">
+                Frequently Asked Questions
+              </h2>
+              <FAQ faqs={faqItems} />
+            </div>
 
-            {faqItems.length > 0 && (
-              <div className="mt-5">
-                <h2 className="fw-bold mb-4 text-center">
-                  Frequently Asked Questions
-                </h2>
-                <FAQ faqs={faqItems} />
-              </div>
-            )}
           </article>
         </div>
       </div>

@@ -145,14 +145,12 @@ const SumpPumpPage = () => {
               <p>Your home is your most valuable asset. A flooded basement is a devastating event that damages not only your property and belongings but also creates a hazardous environment ripe for toxic mold growth. Don&apos;t leave the safety of your basement to chance or a cheap, poorly installed pump. Invest in a professional-grade sump pump and battery backup system, installed by certified plumbers who understand the unique challenges of Denver&apos;s climate. Contact us today for a professional assessment and protect your home for years to come.</p>
             </div>
 
-            {faqItems.length > 0 && (
-              <div className="mt-5">
-                <h2 className="fw-bold mb-4 text-center">
-                  Frequently Asked Questions
-                </h2>
-                <FAQ faqs={faqItems} />
-              </div>
-            )}
+            <div className="mt-5">
+              <h2 className="fw-bold mb-4 text-center">
+                Frequently Asked Questions
+              </h2>
+              <FAQ faqs={faqItems} />
+            </div>
           </article>
         </div>
       </div>

@@ -148,14 +148,12 @@ const CommercialPlumbingPage = () => {
                 <p>Choosing a plumber for your business is a significant decision. Your choice can directly affect your bottom line, your reputation, and your legal standing. With our decades of dedicated commercial experience in the Denver metro area, we bring an unparalleled level of professionalism to every job. We are fully licensed, insured, and committed to a standard of excellence that your business deserves. Contact us to discuss your specific needs or to schedule a professional consultation.</p>
             </div>
 
-            {faqItems.length > 0 && (
-              <div className="mt-5">
-                <h2 className="fw-bold mb-4 text-center">
-                  Frequently Asked Questions
-                </h2>
-                <FAQ faqs={faqItems} />
-              </div>
-            )}
+            <div className="mt-5">
+              <h2 className="fw-bold mb-4 text-center">
+                Frequently Asked Questions
+              </h2>
+              <FAQ faqs={faqItems} />
+            </div>
           </article>
         </div>
       </div>

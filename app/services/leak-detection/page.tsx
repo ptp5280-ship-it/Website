@@ -139,14 +139,12 @@ const LeakDetectionPage = () => {
               <p>A hidden leak is a problem that only gets worse—and more expensive—with time. The cost of a professional leak detection service is minuscule compared to the cost of extensive water damage remediation, mold removal, or structural repairs. If you suspect you have a leak, do not hesitate. Contact us for a professional, non-invasive diagnostic service. We have the technology and the decades of experience required to find and fix it right, protecting your most valuable investment: your home.</p>
             </div>
 
-            {faqItems.length > 0 && (
-              <div className="mt-5">
-                <h2 className="fw-bold mb-4 text-center">
-                  Frequently Asked Questions
-                </h2>
-                <FAQ faqs={faqItems} />
-              </div>
-            )}
+            <div className="mt-5">
+              <h2 className="fw-bold mb-4 text-center">
+                Frequently Asked Questions
+              </h2>
+              <FAQ faqs={faqItems} />
+            </div>
           </article>
         </div>
       </div>

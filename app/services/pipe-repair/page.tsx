@@ -157,14 +157,12 @@ const PipeRepairPage = () => {
               <p>Your home&apos;s piping is a fundamental system that you rely on every day. Ignoring the signs of failure is a gamble against an inevitable and costly emergency. If you are experiencing any of the warning signs of a failing pipe system, contact us for a professional assessment. We will provide an honest, expert opinion on whether a simple repair will suffice or if a whole-home repipe is the right investment to protect your property for decades to come.</p>
             </div>
 
-            {faqItems.length > 0 && (
-              <div className="mt-5">
-                <h2 className="fw-bold mb-4 text-center">
-                  Frequently Asked Questions
-                </h2>
-                <FAQ faqs={faqItems} />
-              </div>
-            )}
+            <div className="mt-5">
+              <h2 className="fw-bold mb-4 text-center">
+                Frequently Asked Questions
+              </h2>
+              <FAQ faqs={faqItems} />
+            </div>
           </article>
         </div>
       </div>

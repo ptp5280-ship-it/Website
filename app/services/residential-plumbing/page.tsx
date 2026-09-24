@@ -138,14 +138,12 @@ const ResidentialPlumbingPage = () => {
               <p>For any plumbing need, big or small, you can count on Peach Tree Plumbing to provide reliable, professional, and courteous service. We are proud to be the trusted plumbing partner for so many homeowners across the Denver area. Contact us today to schedule a service and experience the difference that true professionalism makes.</p>
             </div>
 
-            {faqItems.length > 0 && (
-              <div className="mt-5">
-                <h2 className="fw-bold mb-4 text-center">
-                  Frequently Asked Questions
-                </h2>
-                <FAQ faqs={faqItems} />
-              </div>
-            )}
+            <div className="mt-5">
+              <h2 className="fw-bold mb-4 text-center">
+                Frequently Asked Questions
+              </h2>
+              <FAQ faqs={faqItems} />
+            </div>
           </article>
         </div>
       </div>

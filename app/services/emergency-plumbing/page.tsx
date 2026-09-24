@@ -141,14 +141,12 @@ const EmergencyPlumbingPage = () => {
               <p>A plumbing emergency is a serious event, but it doesn&apos;t have to be a catastrophe. With a clear understanding of your role and a reliable, professional plumber on call, you can navigate the crisis with confidence. Our team is here to be that lifeline for the Denver community, providing expert, authoritative service whenever you need it most. Keep our number handy, and know that real help is just a phone call away.</p>
             </div>
 
-            {faqItems.length > 0 && (
-              <div className="mt-5">
-                <h2 className="fw-bold mb-4 text-center">
-                  Frequently Asked Questions
-                </h2>
-                <FAQ faqs={faqItems} />
-              </div>
-            )}
+            <div className="mt-5">
+              <h2 className="fw-bold mb-4 text-center">
+                Frequently Asked Questions
+              </h2>
+              <FAQ faqs={faqItems} />
+            </div>
           </article>
         </div>
       </div>

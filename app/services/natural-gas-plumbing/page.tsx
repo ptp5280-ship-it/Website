@@ -146,14 +146,12 @@ const NaturalGasPlumbingPage = () => {
               <p>Your home&apos;s gas piping is an essential system that provides comfort and convenience. Entrust its installation, repair, and maintenance only to certified professionals with a proven track record of safety and excellence. We have been serving the Denver community for decades, and our commitment to safety is absolute. Contact us for a consultation or for any gas plumbing needs.</p>
             </div>
 
-            {faqItems.length > 0 && (
-              <div className="mt-5">
-                <h2 className="fw-bold mb-4 text-center">
-                  Frequently Asked Questions
-                </h2>
-                <FAQ faqs={faqItems} />
-              </div>
-            )}
+            <div className="mt-5">
+              <h2 className="fw-bold mb-4 text-center">
+                Frequently Asked Questions
+              </h2>
+              <FAQ faqs={faqItems} />
+            </div>
           </article>
         </div>
       </div>

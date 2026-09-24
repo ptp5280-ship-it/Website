@@ -142,14 +142,12 @@ const PlumbingMaintenancePage = () => {
               <p>Our plumbing maintenance plan is more than just a checklist. It&apos;s a partnership. By allowing us to become intimately familiar with your home&apos;s plumbing system, we can provide better advice, faster diagnoses, and more effective long-term solutions. Plan members often receive benefits like priority scheduling and discounts on future work. It is the most logical, responsible, and cost-effective way to manage one of your home&apos;s most critical systems. Contact us to learn more about our Denver plumbing maintenance plans and start protecting your investment today.</p>
             </div>
 
-            {faqItems.length > 0 && (
-              <div className="mt-5">
-                <h2 className="fw-bold mb-4 text-center">
-                  Frequently Asked Questions
-                </h2>
-                <FAQ faqs={faqItems} />
-              </div>
-            )}
+            <div className="mt-5">
+              <h2 className="fw-bold mb-4 text-center">
+                Frequently Asked Questions
+              </h2>
+              <FAQ faqs={faqItems} />
+            </div>
           </article>
         </div>
       </div>
