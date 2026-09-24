@@ -33,7 +33,7 @@ const FAQ = ({ faqs = defaultFaqs }: { faqs?: Faq[] }) => {
           </div>
           <div
             className={`${styles.faqAnswer} ${activeIndex === index ? styles.open : ''}`}>
-            {faq.answer}
+              {faq.answer}
           </div>
         </div>
       ))}

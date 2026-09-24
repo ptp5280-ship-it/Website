@@ -217,7 +217,7 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
               <h2 className="fw-bold mb-4 text-center">
                 Frequently Asked Questions
               </h2>
-              <FAQ faqs={faqItems} />
+              <FAQ faqs={faqItems.length > 0 ? faqItems : undefined} />
             </div>
 
           </article>
