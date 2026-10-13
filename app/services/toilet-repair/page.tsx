@@ -29,7 +29,7 @@ const faqItems = [
     answer: "A running toilet is most often caused by a faulty flapper that no longer seals properly or a malfunctioning fill valve. This constant water flow can waste over 200 gallons a day! Our plumbers can quickly diagnose the issue and replace the worn-out parts to stop the waste and save you money.",
   },
   {
-    question: "What&apos;s involved in installing a new toilet?",
+    question: "What's involved in installing a new toilet?",
     answer: "Our comprehensive toilet installation service includes carefully removing your old toilet, inspecting the flange and water supply line, professionally setting the new toilet with a high-quality wax ring, and ensuring it is perfectly level and functions flawlessly. We handle everything from start to finish.",
   },
   {
